@@ -28,12 +28,11 @@ twitter_username: jpowerj
 github_username:  jpowerj
 
 # Build settings
-#theme: minima
+theme: minima
 #theme: jekyll-theme-clean-blog
-theme: jekyll-whiteglass
+#theme: jekyll-whiteglass
 plugins:
   - jekyll-feed
-  - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
 
