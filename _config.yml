@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Wherein Jeff yells at capitalism
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://jjacobs.me" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jpowerj
-github_username:  jpowerj
+#twitter_username: jpowerj
+#github_username:  jpowerj
 
 # Build settings
 theme: minima
@@ -35,6 +35,11 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+
+show-excerpts: true
+social_links:
+  twitter: jekyllrb
+  github:  jekyll
 
 permalink: /:year/:month/:day/:title/
 paginate_path: /posts/:num/
