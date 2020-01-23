@@ -37,6 +37,7 @@ plugins:
   - jekyll-sitemap
 
 show-excerpts: true
+
 social_links:
   twitter: jekyllrb
   github:  jekyll
