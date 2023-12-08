@@ -12,3 +12,6 @@
 *.shp.ea.iso.xml
 *.shp.iso.xml
 *.shx
+
+.RData
+.Rhistory
