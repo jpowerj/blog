@@ -1,0 +1,11 @@
+---
+title: "DC Segregation"
+format: html
+---
+
+```{r}
+library(tidyverse)
+census_fpath <- "../posts/dc-segregation/assets/census.csv"
+census_df <- read_csv(census_fpath)
+census_df |> head()
+```
