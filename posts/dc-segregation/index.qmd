@@ -12,7 +12,7 @@ format:
     df-print: kable
 ---
 
-Long story short, Pew Research used to have an incredible set of maps visualizing how extreme segregation is in DC, race-wise as well as socioeconomic. A screenshot from this old visualization shows what it looked like:
+About ten years ago, Pew Research released an incredible set of maps visualizing how extreme segregation is in DC, race-wise as well as socioeconomic. A screenshot from this old set of visualizations shows what they used to look like:
 
 ![Pew's visualization of socioeconomic segregation in DC](images/dc_income.jpeg)
 
@@ -135,6 +135,8 @@ geo_df = gpd.GeoDataFrame(geo_df_pd)
 geo_df.set_index('GEOID', inplace=True)
 ```
 
+## Visualizing with Plotly
+
 And now, finally, we can make use of Plotly's `Cloropethmapbox` object to create a **Cloropeth map** of the different income levels:
 
 ```{python}
@@ -146,7 +148,9 @@ And now, finally, we can make use of Plotly's `Cloropethmapbox` object to create
 
 ```{python}
 #| label: cloropeth-map
-from plotly import graph_objs as go
+import plotly.express as px
+import plotly.io as pio
+pio.renderers.default = "notebook"
 median_income_var = "AOQIE001"
 # Capitol Building
 #capitol_lat = 38.889805
@@ -158,31 +162,25 @@ median_income_var = "AOQIE001"
 center_lat = 38.907278946266466
 center_lon = -77.03651807332851
 
-fig = go.Figure(
-    go.Choroplethmapbox(
-        geojson=geo_df.__geo_interface__,
-        locations=geo_df.index,
-        z=geo_df[median_income_var],
-        autocolorscale=True,
-        marker_opacity=0.7,
-        marker_line_width=1,
-        hoverinfo='location+z+text+name'
-    )
-)
-fig.update_layout(
-    #autosize=False,
-    width=800,
-    height=800,
-    #mapbox_style="open-street-map",
+income_fig = px.choropleth_mapbox(
+    geo_df,
+    geojson=geo_df.geometry,
+    locations=geo_df.index,
+    #z=geo_df[median_income_var],
+    color=median_income_var,
+    #autocolorscale=True,
+    opacity=0.7,
     mapbox_style='carto-positron',
-    mapbox_zoom=10.4,
-    mapbox_center = {
+    zoom = 10.4,
+    center = {
         "lat": center_lat,
-        "lon": center_lon
-    }
+        "lon": center_lon,
+    },
+    # width=800,
+    # height=800
 )
-fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-fig.show()
+income_fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+income_fig.show()
 ```
 
 Notice anything? ...I feel like the raw median income distribution pretty much tells the whole story, but if we want to fully recreate the Pew maps, we could collapse these income levels down into (low, medium, high) using the <a href='assets/Rise-of-Residential-Income-Segregation-2012.2.pdf' target='_blank'>methodology from the report's appendix</a> to produce a map of categorical income levels. For 2021, the most recent year for which IPUMS had the 5-year ACS data, the median income for the DC metro area was <a href='https://www.statista.com/statistics/432876/us-metro-areas-by-median-household-income/' target='_blank'>$110,355</a> (for comparison, the **national** median household income was <a href='https://www.census.gov/library/publications/2022/demo/p60-276.html' target='_blank'>$70,784</a>), so that (letting $M$ represent this metro-area median)
@@ -192,8 +190,6 @@ Notice anything? ...I feel like the raw median income distribution pretty much t
 
 ```{python}
 #| label: cloropeth-map-categories
-import plotly.express as px
-from plotly import graph_objs as go
 median_income_var = "AOQIE001"
 # Capitol Building
 #capitol_lat = 38.889805
@@ -220,7 +216,7 @@ def get_income_level(income):
         return "High"
     return "Medium"
 geo_df_nona['income_level'] = geo_df_nona[median_income_var].apply(get_income_level)
-fig = px.choropleth_mapbox(geo_df_nona,
+level_fig = px.choropleth_mapbox(geo_df_nona,
   geojson=geo_df_nona.geometry,
   color="income_level",
   locations=geo_df_nona.index,
@@ -235,8 +231,8 @@ fig = px.choropleth_mapbox(geo_df_nona,
     'Low': 'red'
   }
 )
-fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-fig.show()
+level_fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+level_fig.show()
 ```
 
 And *voila*! The pattern looks... even more bleak in 2021 than it did in 2012 😔
