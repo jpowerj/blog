@@ -1,0 +1,275 @@
+---
+title: "The NFL Has Become (Slightly) More Boring Over Time"
+image: "images/volatility.jpg"
+date: 2024-12-14
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - Sports
+  - Entropy
+  - Data Science
+---
+
+## What Makes an NFL Season "Interesting"?
+
+As a theme that will reappear across several of these posts, we'll see that when we try to translate the interpretive idea of **"interestingness"** into a measurable quantity, **entropy** will be precisely the tool we'll want to use! As a reminder, information entropy is just a measure of how **predictable** the outcome of a stochastic process is:
+
+![](images/entropy.png){fig-align="center"}
+
+In the above figure, for example, each point in the plot represents a **distribution**, which we can think of like the contents of a "bag" that we are going to reach into and pull an object out of:
+
+* The "bag" in the middle with equally many plus signs and minus signs has the highest entropy over all possible "bags", since we cannot predict better than 50/50 what we will pull out when we reach into the bag.
+* The bag all the way on the left, on the other hand, has the lowest possible entropy, since when we reach into this bag we know with 100% certainty that we will pull out a minus sign (and similarly for the bag all the way on the right, where we know with 100% certainty that we will pull out a plus sign).
+
+In one of my favorite sports analyses of all time, for example, Jon Bois demonstrates the usefulness of entropy by <a href='https://www.sbnation.com/2017/8/22/16181334/chart-party-history-of-nfl' target='_blank'>going through every NFL team's historcal record</a>, whereby we can see that **consistent** teams (whether consistently *good* or consistently *bad*) are exactly those teams with the **lowest entropy**, while the most **volatile** teams, manically oscillating between dominant and pathetic seasons, have the highest entropy:
+
+{{< video https://www.youtube.com/watch?v=wge7JK0JV0Q >}}
+
+In this analysis I'm interested in a similar phenomenon, but from the perspective of someone like me: my home team has been so consistently, spectacularly bad for my entire life that I've had to just enjoy watching the NFL **as a whole**, rather than following that one specific team. Because of this, to me, "exciting" seasons are ones in which any team could potentially beat any other team on a given day, whereas "boring" seasons are those in which the usual dynasties (in the 90s: Packers, Broncos; in the 2000s: Patriots, Colts) dominate all others.
+
+<!-- So, to quell my curiosity, I used the same dataset, but ranked each season (over the same span) in terms of the **entropy** of the teams' records. Since this entropy could be defined in several ways, however, I think it's helpful---at least, pretty much the only way my brain is able to work with entropy---to delineate what situations we consider the *most boring* and *least boring*, and then define the specific entropy measure accordingly. So, in my case:
+
+* A season is **boring** to the extent that the record of the two teams going into a given game is predictive of the winner. In the boringness-limit, you don't even need to watch the games at all, since you already know for sure that the better team is going to win.
+* A season is thus **exciting** to the extent that the record of the two teams going into a given game is **not** predictive of the winner. -->
+
+So, to quell my curiosity, I used the same dataset but ranked each season in terms of **unpredictability**. That is, in terms of how well we can predict the winner by knowing which team has a better record. This way of looking at it is captured perfectly by the phrase often used by announcers after astonishing upsets: <a href='https://www.grammarphobia.com/blog/2018/11/thats-why-they-play-the-game.html' target='_blank'>"That's why they play the game!"</a>
+
+## Data Analysis
+
+```{python}
+#| label: load-data
+import pandas as pd
+import numpy as np
+combined_df = pd.read_csv("assets/nfl_combined.csv")
+combined_df.head()
+```
+
+Then, because my brain is forever stuck in an object-oriented mode (and because I'm teaching *Data Structures in Python* next semester!), I decided to keep track of each team's record throughout each season using custom `Season` and `SeasonTeam` objects:
+
+```{python}
+# Get the range of seasons from the df
+first_year_full = combined_df['season'].min()
+last_year_full = combined_df['season'].max()
+print(first_year_full, last_year_full)
+year_range_full = list(range(first_year_full, last_year_full + 1))
+class Season:
+    def __init__(self, year, team_id_list):
+        self.year = year
+        # Keys will be {year}_{team}
+        self.teams = {team_id: SeasonTeam(team_id, self.year) for team_id in team_id_list}
+        
+    def __str__(self):
+        all_teams = self.get_team_list()
+        first_team = all_teams[0]
+        last_team = all_teams[-1]
+        return f"Season[year={self.get_year()},{self.get_num_teams()} teams: [{first_team}, ..., {last_team}]]"
+    
+    def __repr__(self):
+        return self.__str__()
+        
+    def add_team(self, team_id):
+        self.teams[team_id] = SeasonTeam(team_id, self.year)
+        
+    def get_num_teams(self):
+        return len(self.get_team_list())
+    
+    def get_team(self, team_id):
+        return self.teams[team_id]
+    
+    def get_team_list(self):
+        return list(self.teams.keys())
+    
+    def get_team_record(self, team_id):
+        return self.get_team(team_id).get_record()
+    
+    def get_year(self):
+        return self.year
+    
+    def record_result(self, team_id, result):
+        self.get_team(team_id).record_result(result)
+
+class SeasonTeam:
+    def __init__(self, team, year):
+        self.team = team
+        self.year = year
+        # (w,l,t), first week starts at (0,0,0)
+        self.record = np.array([0,0,0])
+    
+    def get_record(self):
+        return self.record
+    
+    def record_result(self, result):
+        new_record = self.get_record() + result
+        self.set_record(new_record)
+        
+    def set_record(self, new_record):
+        self.record = new_record
+```
+
+So that now we can use a dictionary of `Season` objects to keep track of season-by-season data:
+
+```{python}
+#| label: season-dict
+unique_home = set(combined_df['away_team'].unique())
+unique_away = set(combined_df['home_team'].unique())
+unique_teams_set = unique_home.union(unique_away)
+team_ids = sorted(list(unique_teams_set))
+print(team_ids)
+print(year_range_full)
+seasons = {cur_year: Season(cur_year, team_ids) for cur_year in year_range_full}
+print(seasons[1999])
+print(seasons.keys())
+```
+
+And after defining some helper functions:
+
+```{python}
+#| label: helper-fns
+# Ties count as 0.5 win and 0.5 loss
+win_vec = np.array([1, 0, 0.5])
+loss_vec = np.array([0, 1, 0.5])
+def compute_win_pct(record_vec):
+    if np.sum(record_vec) == 0:
+        # No games played yet, win pct considered 0
+        return 0
+    total_wins = np.dot(record_vec, win_vec)
+    total_losses = np.dot(record_vec, loss_vec)
+    win_pct = total_wins / (total_wins + total_losses)
+    return win_pct
+
+def compare_records(record_a, record_b):
+    pct_a = compute_win_pct(record_a)
+    pct_b = compute_win_pct(record_b)
+    if pct_a > pct_b:
+        return 1
+    if pct_b > pct_a:
+        return -1
+    return 0
+```
+
+I processed each game in a giant, completely-inefficient loop, which could definitely be done in a more efficient data-sciency way!
+
+```{python}
+#| label: season-loop
+all_result_data = []
+for row_index, row in combined_df.iterrows():
+    cur_game_id = row['game_id']
+    cur_season = row['season']
+    season_obj = seasons[cur_season]
+    cur_week = row['week']
+    cur_away = row['away_team']
+    cur_home = row['home_team']
+    cur_result = row['result']
+    #print(cur_away, cur_home, cur_result)
+    away_pre_record = season_obj.get_team_record(cur_away)
+    home_pre_record = season_obj.get_team_record(cur_home)
+    away_better = compare_records(away_pre_record, home_pre_record)
+    if away_better > 0:
+        better_team = cur_away
+    elif away_better < 0:
+        better_team = cur_home
+    else:
+        better_team = "none"
+    #print(cur_away, away_pre_record, cur_home, home_pre_record, away_better)
+    if cur_result < 0:
+        # Away team won
+        winning_team = cur_away
+        away_result = np.array([1,0,0])
+        home_result = np.array([0,1,0])
+    elif cur_result > 0:
+        # Home team won
+        winning_team = cur_home
+        home_result = np.array([1,0,0])
+        away_result = np.array([0,1,0])
+    else:
+        # Tie
+        winning_team = "none"
+        away_result = np.array([0,0,1])
+        home_result = np.array([0,0,1])
+    season_obj.record_result(cur_away, away_result)
+    season_obj.record_result(cur_home, home_result)
+    away_post_record = season_obj.get_team_record(cur_away)
+    home_post_record = season_obj.get_team_record(cur_home)
+    #print(cur_away, away_post_record, cur_home, home_post_record)
+    # Now we can create the results data
+    result_data = {
+        'game_id': cur_game_id,
+        'away_pre': away_pre_record,
+        'home_pre': home_pre_record,
+        'better_team': better_team,
+        'winning_team': winning_team,
+        'better_won': (better_team != "none") and (better_team == winning_team),
+        'away_result': away_result,
+        'home_result': home_result,
+        'away_post': away_post_record,
+        'home_post': home_post_record
+    }
+    all_result_data.append(result_data)
+```
+
+The `all_result_data` list can now immediately be converted into a Pandas `DataFrame`:
+
+```{python}
+#| label: result-df
+result_df = pd.DataFrame(all_result_data)
+result_df.head()
+```
+
+But this reveals an important consideration, which is that we should specifically focus on only those games where there *was* a team with an unambiguously-better record:
+
+```{python}
+#| label: better-worse-df
+result_comp_df = result_df[result_df['better_team'] != "none"].copy()
+result_comp_df.head()
+```
+
+So that now we can find the **overall** proportion of all games where the team with the better record indeed won:
+
+```{python}
+result_comp_df['better_won'].mean()
+```
+
+And then we can use Pandas' `groupby()` to compute this mean for each season:
+
+```{python}
+from itables import show
+result_comp_df['season'] = result_comp_df['game_id'].apply(lambda x: int(x.split("_")[0]))
+mean_by_season = result_comp_df.groupby('season')['better_won'].mean().reset_index()
+show(mean_by_season)
+```
+
+## Plotting Results
+
+First, plotting these means as a line graph gives some insight, but is a bit messy due to the season-to-season volatility:
+
+```{python}
+import matplotlib.pyplot as plt
+import seaborn as sns
+#plt.figure(figsize=(11,8))
+season_plot = sns.lineplot(x='season', y='better_won', data=mean_by_season, marker='o')
+#plt.xticks(rotation=45, ha='right')
+plt.title("Predictability of NFL Games, 1987-2021")
+plt.xlabel("Season")
+plt.ylabel("Pr(Win | Better Record)")
+plt.show()
+```
+
+We *can* start to see a general trend, though, if we plot a line of best fit, with the important caveats that this is to indicate a general trend, *not* that we actually think the underlying data-generating process is linear!
+
+```{python}
+season_regplot = sns.regplot(x='season', y='better_won', data=mean_by_season, ci=89) #, lowess=True)
+season_regplot.axhline(mean_by_season['better_won'].mean(), linestyle="dashed")
+plt.title("Predictability of NFL Games, 1987-2021")
+plt.xlabel("Season")
+plt.ylabel("Pr(Win | Better Record)")
+plt.show()
+```
+
+And there you have it: the NFL has gotten slightly more boring over time, as measured by the ability to predict game outcomes from the records of the teams going into the game...
+
+<!-- * Most starting QBs
+* Parity
+* Tournament winners -->
+
