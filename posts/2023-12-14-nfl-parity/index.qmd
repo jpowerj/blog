@@ -1,7 +1,7 @@
 ---
 title: "The NFL Has Become (Slightly) More Boring Over Time"
 image: "images/volatility.jpg"
-date: 2024-12-14
+date: 2023-12-14
 format:
   html:
     df-print: kable

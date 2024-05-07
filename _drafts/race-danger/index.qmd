@@ -1,0 +1,136 @@
+---
+title: "US Cities: Race vs. Perceptions of 'Danger'"
+author: "Jeff Jacobs"
+format:
+  html:
+    df-print: kable
+---
+
+```{r}
+#| label: load-data
+#| warning: false
+library(tidyverse)
+danger_df <- read_csv("race_danger.csv")
+rmap <- c('%'='')
+danger_df <- danger_df |> rename(city=X) |>
+  mutate(
+    Democrats = as.numeric(str_replace_all(Democrats, rmap)),
+    Republicans = as.numeric(str_replace_all(Republicans, rmap)),
+    DemRep = as.numeric(str_replace_all(DemRepDifference, rmap)),
+    black_pop = as.numeric(str_replace_all(black_pop, rmap))
+  ) |> mutate(
+    dem_danger = 100 - Democrats,
+    rep_danger = 100 - Republicans
+  ) |> mutate(
+    repdem_diff = rep_danger - dem_danger
+  ) |> select(city, dem_danger, rep_danger, repdem_diff, black_pop, murder_rate, danger_2006)
+danger_df
+```
+
+And plot
+
+```{r}
+ggplot(danger_df, aes(x = black_pop, y=rep_danger, label=city)) +
+  geom_text() +
+  geom_smooth(method='lm', color='red') +
+  #geom_abline(intercept=0, slope=1, linetype="dashed") +
+  xlim(0,80) +
+  ylim(0, 100) +
+  theme_classic()
+```
+
+```{r}
+ggplot(danger_df, aes(x = murder_rate, y=rep_danger, label=city)) +
+  geom_text() +
+  geom_smooth(method='lm', color='red') +
+  #geom_abline(intercept=0, slope=1, linetype="dashed") +
+  xlim(0,80) +
+  ylim(0, 100) +
+  theme_classic()
+```
+
+```{r}
+ggplot(danger_df, aes(x = black_pop, y=repdem_diff, label=city)) +
+  geom_text() +
+  geom_smooth(method='lm') +
+  #geom_abline(intercept=0, slope=1, linetype="dashed") +
+  xlim(0,80) +
+  ylim(0, 100) +
+  theme_classic()
+```
+
+## Now Dem and Rep side-by-side
+
+```{r}
+#| label: demrep-facets
+long_df <- danger_df |> pivot_longer(
+    -c(city, black_pop, murder_rate),
+    names_to = "variable"
+)
+long_df
+```
+
+```{r}
+long_df |> filter(variable == 'dem_danger' | variable == 'rep_danger') |>
+  ggplot(aes(x = black_pop, y=value, label=city)) +
+  geom_text() +
+  geom_smooth(aes(color=variable), method='lm') +
+  #geom_abline(intercept=0, slope=1, linetype="dashed") +
+  xlim(0,80) +
+  ylim(0, 100) +
+  theme_classic() +
+  facet_grid(cols = vars(variable))
+```
+
+```{r}
+long_df |> filter(variable == 'dem_danger' | variable == 'rep_danger') |>
+  ggplot(aes(x = murder_rate, y=value, label=city)) +
+  geom_text() +
+  geom_smooth(aes(color=factor(variable, levels=c('rep_danger', 'dem_danger'))), method='lm') +
+  facet_grid(cols = vars(variable)) +
+  geom_abline(intercept=0, slope=1, linetype="dashed") +
+  xlim(0,80) +
+  ylim(0, 90) +
+  theme_classic() +
+  labs(
+    color = "Party"
+  )
+```
+
+And in 2006:
+
+```{r}
+ggplot(danger_df, aes(x = black_pop, y=danger_2006, label=city)) +
+  geom_text() +
+  geom_smooth(method='lm', color='red') +
+  #geom_abline(intercept=0, slope=1, linetype="dashed") +
+  xlim(0,80) +
+  ylim(0, 100) +
+  theme_classic()
+```
+
+```{r}
+ggplot(danger_df, aes(x = murder_rate, y=danger_2006, label=city)) +
+  geom_text() +
+  geom_smooth(method='lm') +
+  #geom_abline(intercept=0, slope=1, linetype="dashed") +
+  xlim(0,80) +
+  ylim(0, 100) +
+  theme_classic()
+```
+
+```{r}
+danger_df$danger_2006
+cor(danger_df$danger_2006, danger_df$black_pop)
+cor(danger_df$danger_2006, danger_df$murder_rate)
+```
+
+```{r}
+cor(danger_df$rep_danger, danger_df$black_pop)
+cor(danger_df$rep_danger, danger_df$murder_rate)
+```
+
+```{r}
+cor(danger_df$dem_danger, danger_df$black_pop)
+cor(danger_df$dem_danger, danger_df$murder_rate)
+```

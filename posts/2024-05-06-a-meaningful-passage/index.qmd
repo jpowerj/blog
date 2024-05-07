@@ -1,0 +1,46 @@
+---
+title: "A Meaningful Passage"
+subtitle: "For Someday-Parsing"
+image: "images/light_pillars.jpg"
+date: 2024-05-06
+format:
+  html:
+    df-print: kable
+    code-fold: show
+    include-in-header:
+      text: "<link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap' rel='stylesheet'>"
+categories:
+  - Life
+  - Chasing the Owl of Minerva
+bibliography: passage.bib
+---
+
+```{=html}
+<style>
+.reenie-beanie-quote {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24pt;
+  line-height: 1.8rem;
+}
+</style>
+```
+
+(My sloppy attempt at translation!)
+
+::: {.reenie-beanie-quote}
+
+> Kamaswami told him about his business, he showed him wares and warehouses, showed him accounts. Siddhartha learned. He heard much and said little. He treated it all as a game, whose rules he strove to learn precisely, but whose content did not touch his heart.
+>
+> In matters of love he was childish. He tended to pursue blindly, endlessly, insatiably. She taught him to balance taking with giving, and that every gesture, every caress, every touch, every glance, every aspect of a connection has its secret to patiently unlock. She taught him that in each celebration of love the lovers should admire each other, without being conquered or having conquered, so that neither is glutted, neither has the feeling of having misused or having been misused. He spent wonderful hours with the clever and beautiful artist, became her pupil, her lover, her friend. Here, with Kamala, lay the value and purpose of his current life, and not with Kamaswami's business.
+> <br><div style='float: right;'>[@hesse_siddhartha_1922]</div>
+
+:::
+
+::: {.hidden}
+
+::: {#refs}
+:::
+
+:::
