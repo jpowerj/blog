@@ -120,3 +120,7 @@ dark-mode-toggle.slider[mode="dark"]::part(toggleLabel)::after {
   background-image: var(--dark-mode-toggle-light-icon, url("sun.svg"));
   filter: var(--dark-mode-toggle-icon-filter, invert(100%));
 }
+
+#quarto-header {
+  background-color: #bd5d38 !important;
+}
