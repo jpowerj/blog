@@ -7,8 +7,6 @@ format:
   html:
     df-print: kable
     code-fold: show
-    include-in-header:
-      text: "<link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap' rel='stylesheet'>"
 categories:
   - Life
   - Chasing the Owl of Minerva
