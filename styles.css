@@ -1,5 +1,9 @@
 /* css styles */
 
+.navbar {
+  background-color: #bd5d38 !important;
+}
+
 .navbar-dark {
   background-color: #bd5d38 !important;
   /* Bootstrap blue bg */
