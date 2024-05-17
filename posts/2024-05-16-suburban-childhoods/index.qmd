@@ -1,0 +1,28 @@
+---
+title: "Starting at the Finish Line"
+subtitle: "Lives of Quiet Desperation in the US Suburbs"
+image: "images/light_pillars.jpg"
+date: 2024-05-06
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - Life
+  - Finding My Own Voice
+bibliography: Codependency.bib
+---
+
+This is a strange post to try and write. There's a passage in a Dave Eggers book I re-read recently (*You Shall Know Our Velocity!*), where the main character describes a council of incessant mental "advisors" who tap him on the shoulder throughout the day, reminding him of the most traumatic, embarrassing, and shameful aspects of his life. Well, I definitely have a similar team of mental consultants, who tap me on the shoulder every day just to remind me, "*Psst*, Hey, Jeff! Remember! Your opinions don't matter! Nope, not even a little bit!"
+
+The thing that makes this all difficult to write is the fact that, I still believe that's completely true---in fact, in light of recent events with respect to friendships, interpersonal relationships, therapists, etc., I believe it now more than ever. What this means is, I can't provide a narrative like "I used to believe this hyper-negative cynical thing about myself, but I managed to break out of it, and you can too!"
+
+So then... why write anything?
+
+Because, long story short, I think there may be value in what I'll call a "climbing in through the window" approach to mental health: ways we may still be able to attain a modicum of emotional well-being even when we find the front door (the "standard" approaches in popular self-help books, that seem to suffice for most people, maybe?) locked, and none of our keys are working.
+
+It was another re-reading, of @beattie_codependent_1986, that pushed me to seek out a full-on outpatient mental health program a few weeks ago. I can't explain exactly how I got from there to here, but maybe if you've read that book or done this type of program it'll click: I had the thought that maybe, even if my opinion truly doesn't matter to anyone else, it can still matter to me? It's not so much that I believe that (because I don't), but that I *aspire to believe it*. And... while my subsequent instinct is to run to my journal, writing thoughts out here feels like a healthy step at the moment, as I've reached a point where I can write dozens of pages in my journal every week, expressing how I feel in minute detail, yet I lock up the moment I try to express it *outwardly*, to anyone else.
+
+So, here goes.
+
+I can't speak for anyone else, but when I think about my childhood in DC &rarr; adolescence in the DC suburbs there's something extremely... unsettling, dark, gut-wrenching, subtly horrifying about it.
