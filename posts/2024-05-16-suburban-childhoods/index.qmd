@@ -2,7 +2,7 @@
 title: "Starting at the Finish Line"
 subtitle: "Lives of Quiet Desperation in the US Suburbs"
 image: "images/burn_my_memories.png"
-date: 2024-05-06
+date: 2024-05-16
 format:
   html:
     df-print: kable
