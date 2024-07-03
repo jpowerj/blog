@@ -2,7 +2,7 @@
 title: "The Skycycle Blues"
 #subtitle: "Lives of Quiet Desperation in the US Suburbs"
 image: "images/knievel.jpg"
-date: 2024-05-16
+date: 2024-07-02
 format:
   html:
     df-print: kable
