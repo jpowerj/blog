@@ -25,7 +25,7 @@ bibliography: passage.bib
 </style>
 ```
 
-(My sloppy attempt at translation!)
+(My sloppy attempt at translation! And embedding fonts!)
 
 ::: {.reenie-beanie-quote}
 
