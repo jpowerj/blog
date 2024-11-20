@@ -1,0 +1,99 @@
+---
+title: "What Does Depression Feel Like?"
+subtitle: "Expression Beyond *Langue* vs. *Parole*"
+image: "images/schoenberg_crop.jpg"
+date: 2024-11-19
+bibliography: Depression.bib
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - Life
+  - Depression
+---
+
+## "I had no way of knowing that most people didn't feel that way"
+
+Any time I even think about vocalizing (or even worse, writing down) something "personal", a shrill, persistent voice in my head begins screaming:
+
+> Shut up dude!
+
+> Nobody cares!
+
+> You've got about 3 seconds to stop, before you overwhelm everyone in your immediate vicinity!
+
+And, even though some of the things talked about in @gibson_adult_2015 didn't exactly match up with my own experiences, one anecdote from it (the very first one in the book) did feel extremely familiar:
+
+> "It was incredibly lonely, like I was utterly isolated. It was a fact of my existence. It just felt normal. In my family, everyone was separate from each other, and we were all emotionally isolated. We lived parallel lives, with no points of contact. In high school, I used to get this image of floating in the ocean with no one around me. That's how it felt at home."
+> 
+> When I asked him more about the feeling of loneliness, he said, "It was a sensation of emptiness and nothingness. I had no way of knowing that most people didn't feel that way. That feeling was just daily life for me."
+
+What one of my parents would call "getting brainwashed by my 'shrink'" over the past ~15 years, I think of as slowly coming to a realization: that, yes, the above is a pretty accurate description of how I felt when I was younger, and also captures my... surprise? when therapists would point out some of the more damaging aspects of my childhood.
+
+## "The very water I drink, the very air I breathe, would feel like long, sharp needles"
+
+The corrollary to this realization---the "doing something about it" part---has been my journey to try and develop a language for expressing these previously-unnoticed feelings to people in my life (partners, friends, and others), rather than struggling in a wordless, panic-filled, isolated silence.
+
+To stretch the language metaphor here a bit more, the part that keeps me up at night is how languages becomes more difficult to learn as you get older. To use an extreme example, but one that is often in the back of my mind: [Genie](https://en.wikipedia.org/wiki/Genie_(feral_child)), a woman who was prevented from acquiring language *at all* during her childhood, hasn't been able to acquire fluency in adulthood either, despite being freed from her imposed isolation.
+
+Though I'm obviously not in the same scenario as Genie in an objective psychological/behavioral sense (I *did* acquire fluency in a language during childhood, for example, hence my emphasis on using "fluency" here in a loose, metaphorical sense), subjectively I absolutely feel that I lack "emotional fluency", and that it has been immensely difficult trying to develop it in adulthood.
+
+Given all this, in the same way that Genie is still able to use sounds, gestures, facial expressions, and so on to try and communicate, I've found myself (for reasons I don't entirely understand) holding tightly to the rare pieces of media---poems, songs, movies---which feel like they are expressing something that I feel but that I'm unable to express in words.
+
+The quote in the heading of this section, for example, comes from a Haruki Murakami novel (*Sputnik Sweetheart*, if I'm remembering correctly), which I read as a teenager and felt like an early example of "holy shit, this is the thing I've been trying, and failing, to express to people":
+
+> Every now and then I would feel a violent stab of loneliness. The very water I drink, the very air I breathe, would feel like long, sharp needles. The pages of a book in my hands would take on the threatening metallic gleam of razor blades. I could feel the roots of loneliness creeping through me when the world was hushed at four o'clock in the morning.
+
+I have an *absurdly* distinct, clear, specific memory from early childhood---maybe 8 or 9 years old---which matches this description: I can trace where I was down to the [exact point on the globe](https://maps.app.goo.gl/A7Z93kgeW22BkxYe7). Walking along a fence separating the upper and lower fields at my elementary school when I was maybe 8 or 9, I looked out at the totally-empty fields and felt this exact violent stab of loneliness.
+
+So, I think the main thing that's driving me to write all this is just the desire to compile some of these pieces of media together in one place, so I can track my progress towards "emotional fluency". I want to compare how utterly stunned, floored, taken aback I was upon first encountering them---upon first realizing that these things were *possible* to communicate---with my growing ability nowadays to communicate these types of feelings to others.
+
+### "Those lonely giant spaces in between your every word"
+
+The main *books* I remember having this effect, that I read at a way-way-too-young age, were probably... Murakami, Hermann Hesse, Sartre's *Nausea*, and probably some Dave Eggers books.
+
+But, discovering Eyedea was almost certainly the first time I had encountered this feeling in a mode *beyond* "just" language, i.e., words.
+
+During one of my many rough patches, though my first as an "adult" (after high school), I discovered this song, which like many examples here I simply cannot listen to anymore because I will be too emotionally overwhelmed:
+
+{{< video https://www.youtube.com/watch?v=4uyXaR9aPrk >}}
+
+And, even though I had made some simple songs and beats and whatnot earlier on in life (as any respectable awkward cringey suburban white hip hop fan does in their teens), this song definitely activated some new module in my brain, hence why I chose **Lonely Giant Spaces** as my... artist/producer name.
+
+### Melancholia
+
+The next one that comes to mind would be the poem "Kate" by B. Dolan, but I've [already covered that one](../2024-07-02-knieval/index.qmd) here.
+
+But if Eyedea blew my mind because of how the music mixed with the lyrics to produce something more expressive of the feeling than either would have generated individually, William Basinski blew my mind by showing me how **completely instrumental music** could capture just as much, if not more, of this type of feeling.
+
+I can listen to this piece (which turns out to be just the first track of the entire Melancholia [album](https://music.youtube.com/playlist?list=OLAK5uy_n4kv72NcwoXUT0CAQ5rc-mks1q2NLd5AU&si=5mHDwhvTBLLYGDOo) where every other track is equally gut-wrenching) for about... 10 to 15 seconds before I become too overwhelmed and have to turn it off:
+
+{{< video https://www.youtube.com/watch?v=PUhimrxosdw >}}
+
+### Schönberg's *Gaze*
+
+Around the same time, as Basinski showed me how instrumental music on its own could capture these feelings, Schönberg (who is way more well-known for his atonal music, which kind of makes sense given this whole discussion) showed me how visual art could capture them. This portrait, his work just called *Gaze*, gave me goosebumps, butterflies, and everything else the first time I saw it, because (sadly but very very truly) it's what I see when I look in a mirror, in a phenomenological sense:
+
+![](images/schoenberg_crop.jpg){fig-align="center" width="60%"}
+
+### "I look into the mirror all I'm seeing is a skeleton"
+
+Speaking of mirrors, this one was especially... jarring? To discover since I had already been listening to nothing,nowhere for years before it came out, and yet it's what moved him from "Amazing artist" to "Unquestionably-saved-my-life artist" in my mind:
+
+{{< video https://www.youtube.com/watch?v=Tadq1Fso9cs >}}
+
+I can't say too much about this particular era of my life and the impact this song had on it, because of reasons, but... I can say I remember being somewhere near [this point](https://maps.app.goo.gl/UNiHPSAVjPM53dZA8) in the middle of Nevada in the middle of the night, totally lost in a literal and figurative sense, feeling like this song was someone suddenly handing me a flashlight in a dark, scary room.
+
+### "Everything was moving much too fast. I'm sorry. I think things might be starting to slow down now... I'm not sure"
+
+In my current... I don't know what to call it besides "current seemingly-inescapable rut", part of what has been so rough at first glance is that I haven't exactly found one specific piece of media that captures the feeling. But, when I write that out, I realize that this is probably a sign of progress---my need to "hide" behind these pieces of media is hopefully diminishing as my ability to express them in my *own* words improves. But, as a final point of comparison for my future self, these are two special songs that have brought comfort to me in the days since May 7th, 2024:
+
+{{< video https://www.youtube.com/watch?v=C4DwV8J9wzA >}}
+
+{{< video https://www.youtube.com/watch?v=QyXQ_xdoLEY >}}
+
+## References
+
+::: {#refs}
+:::

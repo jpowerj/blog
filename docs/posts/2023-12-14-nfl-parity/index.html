@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.23">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jeff Jacobs">
 <meta name="dcterms.date" content="2023-12-14">
 
-<title>I Am Become Jeff – The NFL Has Become (Slightly) More Boring Over Time</title>
+<title>The NFL Has Become (Slightly) More Boring Over Time – I Am Become Jeff</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -122,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -237,10 +237,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div id="load-data" class="cell-output cell-output-display" data-execution_count="1">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -395,9 +394,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-</div>
 <p>Then, because my brain is forever stuck in an object-oriented mode (and because I’m teaching <em>Data Structures in Python</em> next semester!), I decided to keep track of each team’s record throughout each season using custom <code>Season</code> and <code>SeasonTeam</code> objects:</p>
-<div id="1c350639" class="cell" data-execution_count="2">
+<div id="0b7bab0c" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the range of seasons from the df</span></span>
@@ -578,10 +576,9 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </details>
 <div id="result-df" class="cell-output cell-output-display" data-execution_count="6">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -669,7 +666,6 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </div>
 </div>
 </div>
-</div>
 <p>But this reveals an important consideration, which is that we should specifically focus on only those games where there <em>was</em> a team with an unambiguously-better record:</p>
 <div id="cell-better-worse-df" class="cell" data-execution_count="7">
 <details open="" class="code-fold">
@@ -679,10 +675,9 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </details>
 <div id="better-worse-df" class="cell-output cell-output-display" data-execution_count="7">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -770,9 +765,8 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </div>
 </div>
 </div>
-</div>
 <p>So that now we can find the <strong>overall</strong> proportion of all games where the team with the better record indeed won:</p>
-<div id="f379e86e" class="cell" data-execution_count="8">
+<div id="d1f9c1de" class="cell" data-execution_count="8">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>result_comp_df[<span class="st">'better_won'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -782,7 +776,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </div>
 </div>
 <p>And then we can use Pandas’ <code>groupby()</code> to compute this mean for each season:</p>
-<div id="6d0348e3" class="cell" data-execution_count="9">
+<div id="f3a730b8" class="cell" data-execution_count="9">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itables <span class="im">import</span> show</span>
@@ -791,7 +785,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>show(mean_by_season)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<table id="itables_1d1f8ba4_5f6c_4d2a_bbb0_c48ba23866f5" class="display nowrap" data-quarto-disable-processing="true" style="table-layout:auto;width:auto;margin:auto;caption-side:bottom">
+<table id="itables_5dfd1fe1_adfa_4350_a426_d966572db9b3" class="display nowrap" data-quarto-disable-processing="true" style="table-layout:auto;width:auto;margin:auto;caption-side:bottom">
 <thead>
     <tr style="text-align: right;">
       
@@ -870,7 +864,7 @@ Loading ITables v2.0.1 from the internet...
 <script type="module">
     import {DataTable, jQuery as $} from 'https://www.unpkg.com/dt_for_itables@2.0.5/dt_bundle.js';
 
-    document.querySelectorAll("#itables_1d1f8ba4_5f6c_4d2a_bbb0_c48ba23866f5:not(.dataTable)").forEach(table => {
+    document.querySelectorAll("#itables_5dfd1fe1_adfa_4350_a426_d966572db9b3:not(.dataTable)").forEach(table => {
         // Define the table data
         const data = [[1987, 0.541667], [1988, 0.568182], [1989, 0.569061], [1990, 0.621622], [1991, 0.689266], [1992, 0.647668], [1993, 0.574713], [1994, 0.596591], [1995, 0.583333], [1996, 0.609137], [1997, 0.606061], [1998, 0.664948], [1999, 0.60199], [2000, 0.641148], [2001, 0.613208], [2002, 0.592417], [2003, 0.64455], [2004, 0.619512], [2005, 0.64878], [2006, 0.606635], [2007, 0.67907], [2008, 0.620853], [2009, 0.62844], [2010, 0.563981], [2011, 0.630841], [2012, 0.602871], [2013, 0.613861], [2014, 0.640777], [2015, 0.617225], [2016, 0.634703], [2017, 0.631579], [2018, 0.590698], [2019, 0.655814], [2020, 0.674312], [2021, 0.60177]];
 
@@ -888,7 +882,7 @@ Loading ITables v2.0.1 from the internet...
 <section id="plotting-results" class="level2">
 <h2 class="anchored" data-anchor-id="plotting-results">Plotting Results</h2>
 <p>First, plotting these means as a line graph gives some insight, but is a bit messy due to the season-to-season volatility:</p>
-<div id="e0f2892f" class="cell" data-execution_count="10">
+<div id="ff97dd86" class="cell" data-execution_count="10">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -910,7 +904,7 @@ Loading ITables v2.0.1 from the internet...
 </div>
 </div>
 <p>We <em>can</em> start to see a general trend, though, if we plot a line of best fit, with the important caveats that this is to indicate a general trend, <em>not</em> that we actually think the underlying data-generating process is linear!</p>
-<div id="f8bc8b5f" class="cell" data-execution_count="11">
+<div id="6fba2da6" class="cell" data-execution_count="11">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>season_regplot <span class="op">=</span> sns.regplot(x<span class="op">=</span><span class="st">'season'</span>, y<span class="op">=</span><span class="st">'better_won'</span>, data<span class="op">=</span>mean_by_season, ci<span class="op">=</span><span class="dv">89</span>) <span class="co">#, lowess=True)</span></span>
@@ -972,18 +966,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1015,7 +998,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1023,7 +1028,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

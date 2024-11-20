@@ -1,10 +1,22 @@
 ---
 title: "US Cities: Race vs. Perceptions of 'Danger'"
 author: "Jeff Jacobs"
+bibliography: "../Blog.bib"
 format:
   html:
     df-print: kable
 ---
+
+If it's not already clear from my other writings, I feel like one of the few "comparative advantages" I have that could be helpful for making the world less shitty come from how:
+
+* (a) I spent most of the formative years of my white cishet adolescence in an incredibly generic US suburb, but also
+* (b) I've been able to travel and see places---Gaza, Chiapas, Cuba, China, and maybe Hong Kong---that people from the US tend not to be able to see firsthand?
+
+Given that, I think one way this helps me is the perspective it gives me about why discussions around **race** and **class** in the US often seem particularly confusing to those from other parts of the world. A lot of my desire to study social science, for example, came from my dream that it might be possible to use tools from these fields to "push past" the eternal cycle of back-and-forth bickering about "Race matters more than class! No, class matters more than race!" that sometimes erupts during conversations on "the US left", broadly-speaking.
+
+Out of all the books/articles/"hot takes" I've tried to consume to wrap my head around this issue, I have to say, the experience that finally clicked lots of things in my brain was taking Ira Katznelson's two-semester *American Political Development* course while working on my PhD at Columbia.^[As one sidenote: Katznelson was too overly-humble to have us read it for the class I guess, lol, but his chapter in @katznelson_class_1986 is one of the best things I've ever read on this topic.]
+
+Louis Hartz's *The Liberal Tradition in America* [@hartz_liberal_1955]
 
 ```{r}
 #| label: load-data
