@@ -1,0 +1,29 @@
+---
+title: "Counterfactual Thinking: US Foreign Policy and 'The Lobby'"
+subtitle: "Does a Settler-Colonial State Need a Lobby for US Support?"
+image: "images/schoenberg_crop.jpg"
+date: 2024-11-26
+bibliography: Blaming_the_Lobby.bib
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - The World
+---
+
+If I had to pick the four or five "opinion pieces" that most sharply changed how I see politics, @massad_blaming_2006 would definitely be in the mix^[Along with @gourevitch_gun_2015 and @reed_jenner_2015 (which I'm suddenly realizing came out within 10 days of each other 🤯), article-wise, and then @jensen_citizens_2004 and @churchill_justice_2003 in terms of books.]. In hindsight, I think it was one of the things that finally "clicked" in my head what certain Marx-adjacent econo-people had been shouting in my ear for years by that point: that capitalism/imperialism/etc. exist within a **world-system**, and that analyzing one or two parts of that system in isolation from the whole can be dangerous (with how I see it now, using different vocabulary: can lead to *overfitting* in terms of the impact that those one or two parts may have on the rest of the world).
+
+Still thinking in hindsight, it's ironic that probably the only actual "antisemitism on the left" I've ever seen (and it took me... a decade to see it, which hopefully helps illustrate how tiny the problem is, lol) comes from the phenomenon Massad is talking about in the essay: blaming The Lobby for things that the US would do anyways, even in their absence.
+
+That's why the real point, to me, is the importance of **counterfactual thinking** for understanding history and politics and so on: in essence, the reason why Massad's article was so transformative for me is that it led me to the idea that... AIPAC is probably a huge waste of time and money, to a certain degree, in terms of the fundamental goals its backers have in mind? At best, in terms of my post-PhD understanding of international political economy, the sum total of their effort is maybe just to speed up or attach extra accountrements to US policies that would have been enacted even if they hadn't done anything?
+
+To use the groan-inducing phrase that everyone I talk to about this has grown tired of hearing... it all starts to make sense if you look at South Africa and Rhodesia!
+
+Reading books like... the first ones that come to mind are: @gleijeses_conflicting_2011, @gleijeses_visions_2013, @horne_white_2019, @horne_barrel_2001, @nixon_selling_2016, and/or especially @polakow-suransky_unspoken_2011^[For the same argument but for Latin American dictatorships/death squads, see @grandin_empires_2006.], you can quickly see how, for all intents and purposes, the US pretty much single-handedly supported South Africa and Rhodesia in opposition to all ~150 other countries in the world at that time, **despite** both of these pariah states whining and giving big middle fingers to the US every chance that they could.
+
+In all three countries (Apartheid South Africa, Apartheid Rhodesia, and Apartheid Israel), leaders expressed the same sentiments with only slightly different wording.
+
+Here's Moshe Dayan on the effect of US policy on Israeli military conduct:
+
+*Our American friends offer us money, arms, and advice. We take the money, we take the arms, and we decline the advice.* [@slater_mythologies_2020, 384]^[Also recently cited in a [2024 UK Parliamentary Debate](https://hansard.parliament.uk/commons/2024-10-29/debates/7DD72593-8087-4DC2-83EB-A4CDFAC8FC0C/IsraelUNRWABan#contribution-4DFC6066-BC74-4A0C-A388-128AB22318EE)!]
