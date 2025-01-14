@@ -6,6 +6,7 @@ format:
   html:
     df-print: kable
     code-fold: show
+    cache: true
 categories:
   - Sports
   - Entropy

@@ -1,7 +1,7 @@
 ---
 title: "Patting Your Head and Rubbing Your Stomach"
 subtitle: "Syncopation for Musical Optical Illusions"
-image: "images/equivalence.png"
+image: "images/cube.png"
 date: 2025-01-14
 format:
   html:
@@ -11,18 +11,22 @@ categories:
   - Music
 ---
 
-You know that optical illusion where, if you stare at the following image of a cube for long enough, you can "trick" your mind into seeing it alternatively like:
+Dear reader, are you familiar with the optical illusion where, if you stare at the following image of a cube for long enough, you can "trick" your mind into seeing it alternatively like:
 
-* (a) A cube popping out of the screen towards you, or
-* (b) A cube going into the screen away from you?
+* (a) A cube popping out of the screen towards you (so that the lower-left square is the **back**), or
+* (b) A cube going into the screen away from you (so that the lower-left square is the **front**)?
 
-This song, "System" by Brotherly, is the musical equivalent of that illusion:
+![](images/cube.png){fig-align="center"}
+
+This song, "System" by Brotherly, is the musical equivalent of that illusion. Start listening at about 2m15s, and go until 2m45s, to (hopefully) see what I mean---it'll sound like something in the song has suddenly shifted, despite the fact that actually everything in this entire song, from beginning to end, can be counted within 6/4 time (with each of the 6 beats having 4 subdivisions) **or** within 4/4 time (with each of the 4 beats having 6 subdivisions):
 
 {{< video https://www.youtube.com/watch?v=LGKQv6P35Iw >}}
 
+Like how nothing changes in the image of the cube, only the perspective from which we look at it, 2m15s to 2m45s in that song represents solely a shift in what our brains focus on in terms of grouping the notes together into a coherent pattern!
+
 YouTube music-theory-explainer sensation and drummer Yogev Gabay does an amazing job of explaining it [here](https://www.youtube.com/watch?v=vTn0cVN6Abs), but I wanted to see if I could tackle it from the reverse angle.
 
-That is, while Gabay diagrams it out in 6/4 throughout, and thus interprets the rhythmic shift at ~2m30s as basically a "layering" of 4/4 onto this 6/4 grid, I wanted to see if I could train my brain to hear the entire song in 4/4 (like switching from cube-popping-outwards to cube-pushing-inwards), to see what the... majority of the song (the song outside of the 2m20s to 2m45s portion) would look like from this angle. So, here goes...
+That is: while Gabay diagrams it out in 6/4 throughout, and thus interprets the rhythmic shift at ~2m30s as basically a "layering" of 4/4 onto this 6/4 grid, I wanted to see if I could train my brain to hear the entire song in 4/4 (like switching from cube-popping-outwards to cube-pushing-inwards), to see what the... majority of the song (the song outside of the 2m20s to 2m45s portion) would look like from this angle. So, here goes...
 
 To fully navigate the song in 4/4, you have to start the bassline on the... very last beat of a sequence of sixteenth-note sextuplets. But, after that, it starts to feel a little more possible. Meaning, if you were to play it in real life with the 4/4 count throughout, your brain might be salvageable if you had your drummer count like
 
