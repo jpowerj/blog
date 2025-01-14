@@ -10,6 +10,7 @@ aliases: ["/dc-segregation"]
 format:
   html:
     df-print: kable
+    cache: true
 ---
 
 About ten years ago, Pew Research released an incredible set of maps visualizing how extreme segregation is in DC, race-wise as well as socioeconomic. A screenshot from this old set of visualizations shows what they used to look like:

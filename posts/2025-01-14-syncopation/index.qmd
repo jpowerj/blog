@@ -1,0 +1,43 @@
+---
+title: "Patting Your Head and Rubbing Your Stomach"
+subtitle: "Syncopation for Musical Optical Illusions"
+image: "images/equivalence.png"
+date: 2025-01-14
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - Music
+---
+
+You know that optical illusion where, if you stare at the following image of a cube for long enough, you can "trick" your mind into seeing it alternatively like:
+
+* (a) A cube popping out of the screen towards you, or
+* (b) A cube going into the screen away from you?
+
+This song, "System" by Brotherly, is the musical equivalent of that illusion:
+
+{{< video https://www.youtube.com/watch?v=LGKQv6P35Iw >}}
+
+YouTube music-theory-explainer sensation and drummer Yogev Gabay does an amazing job of explaining it [here](https://www.youtube.com/watch?v=vTn0cVN6Abs), but I wanted to see if I could tackle it from the reverse angle.
+
+That is, while Gabay diagrams it out in 6/4 throughout, and thus interprets the rhythmic shift at ~2m30s as basically a "layering" of 4/4 onto this 6/4 grid, I wanted to see if I could train my brain to hear the entire song in 4/4 (like switching from cube-popping-outwards to cube-pushing-inwards), to see what the... majority of the song (the song outside of the 2m20s to 2m45s portion) would look like from this angle. So, here goes...
+
+To fully navigate the song in 4/4, you have to start the bassline on the... very last beat of a sequence of sixteenth-note sextuplets. But, after that, it starts to feel a little more possible. Meaning, if you were to play it in real life with the 4/4 count throughout, your brain might be salvageable if you had your drummer count like
+
+* **One** two three one two three
+* **Two** two three one two three
+* **Three** two three one two three
+* **Four** two three one two **three**
+
+And then the bassline, kick drum, and hi-hat all started exactly on that bolded **three** at the end of the fourth set of sextuplets...
+
+Rather than trying to write out any more words trying to capture how cool it is, I figure an even better way is to write it out in 4/4 on a score, so, here it is with the 4/4 count-in and 4/4 metronome running throughout, so you can see how, while it **is** possible to count it as 4/4, you would really need to
+
+* (a) Train your brain to subdivide each of the 4 beats within a bar into a sextuplet, and then
+* (b) Train your body/fingers to become really good at hitting a drum or playing a note exactly on one of those six sub-beats that go into each sextuplet...
+
+So, without further ado, here is the score with the 4/4 metronome! (Apparently you need to turn the metronome on manually, using the little icon to the right of the play button---I can't find any way to set Flat.io to have it on by default... but otherwise Flat.io is dope!)
+
+<iframe src="https://flat.io/embed/6785fd4cb6258a50958aefe3?_l=true&sharingKey=b88bb2451e991584e255f3f485068a149fcf40f4aeeb990b4f3e5b3d889e2d0e2698c778de83ebb8629bdf61ffb82a298c2d0dbdef66552e52330ca9b92dc16c&layout=responsive&parts=5e8dd179-0802-faac-de93-5f89bbb364fd,63d29d4c-7c48-4f45-7fb6-9d0a5feb8e59" height="480" width="100%" frameBorder="0" allowfullscreen allow="autoplay; midi"></iframe><div style="font-size: 11px; color: #3981FF;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Inter, Helvetica Neue, Helvetica, Arial, sans-serif,sans-serif;margin-top: 4px">View on <a href="https://flat.io" target="_blank" style="color: #3981FF; text-decoration: none;" title="Music notation software">Flat</a>: <a href="https://flat.io/score/6785fd4cb6258a50958aefe3?sharingKey=b88bb2451e991584e255f3f485068a149fcf40f4aeeb990b4f3e5b3d889e2d0e2698c778de83ebb8629bdf61ffb82a298c2d0dbdef66552e52330ca9b92dc16c" target="_blank" style="color: #3981FF; text-decoration: none;">System_4_4</a></div>
