@@ -1,0 +1,19 @@
+---
+title: "The Lattice"
+image: "images/snowshoe.jpg"
+date: 2025-03-17
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - Life
+---
+
+> A snowshoe.
+> 
+> You wear snowshoes when the snow is deep and porous. The latticework within the snowshoe's oval distributes the wearer's weight over a wider area, in order to keep him or her from falling through the snow. So people, the connections between people, the people you know, become a sort of lattice, and the more people, good people, they must be good people, who know that they are here to help, the more of these people you know, and that know you, and know your situation and your story and your troubles or whatnot, the wider and stronger the lattice, and the less likely you are to...
+> 
+> Fall through the snow.
+
+From Dave Eggers' *A Heartbreaking Work of Staggering Genius*.
