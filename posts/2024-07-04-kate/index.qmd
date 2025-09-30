@@ -1,0 +1,238 @@
+---
+title: "B. Dolan, \"Kate\""
+image: "images/bdolan.jpg"
+date: 2024-07-04
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - Art
+  - Poetry
+---
+
+Following up on the [previous post](../2024-07-02-knieval/index.qmd), about B. Dolan's poem "The Skycycle Blues", here I want to post the video for my favorite poem of all time, along with the lyrics since I can't find them anywhere online (and since... the spoken-word version has a lot of screaming/noise, so, reading words at your own pace may be more palatable?). Before I heard this poem I had never heard anything like this, and I haven't heard anything like this since, honestly. *sui generis*.
+
+{{< video https://youtu.be/KGy8xLwHU8U >}}
+
+::: {style="font-family: Garamond, Georgia, serif;"}
+
+> I know myself, even better than Jesus does.<br>
+> I stole from churches. I owe god money.<br>
+> There was a girl with no gag reflex,<br>
+> And a summer with no idea.<br>
+> 
+> Stealing, to buy drugs with Kate.<br>
+> Who needed her smokes so much more<br>
+> than the pope needed another painting in the vatican.<br>
+> 
+> Days in the warehouse, waiting.<br>
+> Katie, and the baby, and Katie.<br>
+> 
+> On my lunch break, alone,<br>
+> us, just wanting to be alone,<br>
+> her nature versus nurture.<br>
+> She was wild, she was like a berserker fairy.<br>
+> Her breath, sweetened with nicotine tar and tension,<br>
+> tension and touching behind backs,<br>
+> whispers in the house,<br>
+> excuses for the dark,<br>
+> hands for flesh...<br>
+> And the most realest despair in the whole wide universe.<br>
+> 
+> Her parents were always home and never around.<br>
+> Just like her live-in-addict-accidental-baby-daddy.<br>
+> His name was Adrian.<br>
+> He used to stab himself in the leg with darts for attention.<br>
+> I used to watch it all go down,<br>
+> and want her.<br>
+> 
+> I used to feed the baby,<br>
+> and try to come down.<br>
+> 
+> I was eighteen, she was seventeen.<br>
+> I was into drugs, she was in love.<br>
+> It was all... all about me, as always.<br>
+> 
+> She heard my first poem.<br>
+> All summer we went to cemeteries to smoke.<br>
+> That's where I learned,<br>
+> to open the box in my throat and sing the blues,<br>
+> all over, but mostly in cemeteries.<br>
+> All of life lived in me.<br>
+> I brought it to Katie,<br>
+> and Katie brought life herself, at seventeen.<br>
+> Seventeen.<br>
+> She loved iced coffee.<br>
+> She loved me.<br>
+> She loved her daughter.<br>
+> She loved her stories.<br>
+> She loved everything,<br>
+> and wanted only to love.<br>
+> I made her write it in a journal.<br>
+> 
+> And why is it,<br>
+> that when I wanted women to inspire themselves,<br>
+> and come alive,<br>
+> and write their fire into books,<br>
+> and bleed like this for themselves and be,<br>
+> here, like I got it see, it's not hard,<br>
+> you can do it, you should do it,<br>
+> more, more, did you? yes, good,<br>
+> why is it, that they never did,<br>
+> 
+> until I kissed them?<br>
+> 
+> And then, they would write shit about me.<br>
+> 
+> Which is not what I wanted.<br>
+> But was fun.<br>
+> And suddenly fed me.<br>
+> 
+> So I'd forgotten where I was,<br>
+> which was,<br>
+> in the pages,<br>
+> getting tattoed down,<br>
+> waiting to be turned over.<br>
+> 
+> Making the mistake.<br>
+> 
+> Feeling her in the dark.<br>
+> The shock of her smell,<br>
+> the strength of her hold on me,<br>
+> like we forget how to do when we get older.<br>
+> Seventeen.<br>
+> She had a grip like her baby.<br>
+> 
+> Was she thirteen? Or fourteen?<br>
+> When one of the Falco brothers,<br>
+> laced a joint with PCP.<br>
+> Her and her cousin.<br>
+> 
+> Katie couldn't move<br>
+> while he _____ her.<br>
+> Her cousin couldn't move<br>
+> while she watched.<br>
+> 
+> For god's sake.<br>
+> 
+> Please.<br>
+> 
+> For the love of all time and space.<br>
+> In this life and the next.<br>
+> From heaven and hell.<br>
+> By any power that possibly exists.<br>
+> By every force of compulsion in the universe.<br>
+> god...<br>
+> 
+> FUCK the Falco brothers,<br>
+> god HATE THEM,<br>
+> god DESTROY THEM BEFORE ANYTHING LIKE JUSTICE CAN EVER EXIST!<br>
+> THE MOTHERFUCKERS WHO GAVE ME MY FIRST PUNCH IN THE FACE,<br>
+> WHO LAID, LIKE THE JACKALS OF CHAOS, OVER THE BEDS OF ANYTHING GOOD!<br>
+> THIS IS A HUMAN CANCER, LIVING IN THE SHADOWS OF A GHOST TOWN!<br>
+> DEMANDING INNOCENCE OFF OF PEOPLE LIKE LUNCH MONEY<br>
+> LATER ______ IT OFF THEM, JERKING IT OFF THEM, STRIPPING IT OFF THEM, STEALING IT OFF THEM,<br>
+> MULTIPLYING AND THRIVING UNTIL AN ENTIRE GENERATION OF SMITHFIELD GIRLS WAS GONE!<br>
+> GONE!<br>
+> GONE!<br>
+> 
+> GONE, DOWN THE PATHS IN THE WOODS,<br>
+> GONE INTO WHATEVER TRAILER HELD THE GREAT NIGHTMARE OF LIFE THAT NIGHT!<br>
+> 
+> JESUS CHRIST!<br>
+> SMITHFIELD SCREAMS TO ME<br>
+> LIKE AN OPEN MOUTH<br>
+> FILLED WITH BLACK MUD,<br>
+> RUSTED IRON GUMS,<br>
+> GRINDING GEARS FOR TEETH!<br>
+> 
+> IN MY DREAMS,<br>
+> HANTON CITY IS THE MONSTER OF TIME,<br>
+> THE HEAVY FIST OF THE ALCOHOLIC-DEATH GOD,<br>
+> BLOATED WITH THE BLOOD OF MY LATE FATHER,<br>
+> STILL HOLDING HIM IN ITS JAWS, GRINNING LIKE A FALCO,<br>
+> AMONG ALL THE OTHER BODIES IN ITS BASEMENT!<br>
+> 
+> MURDER!<br>
+> MURDER!<br>
+> MURDER!<br>
+> SO MANY GIRLS!<br>
+> WHERE THE FUCK WERE THE PARENTS?<br>
+> WAS EVERYONE INSANE?<br>
+> 
+> THE KIDS!<br>
+> THE KIDS!<br>
+> THE KIDS!<br>
+> THE KIDS ALL AROUND ME GETTING LAID TO WASTE!<br>
+> 
+> JIMMY RICHIE TO LONELINESS AND HIS MOTHER'S MESS,<br>
+> THOMAS KUSZKA TO LIES AND PRESSURE,<br>
+> JOHN TO SOME IDIOT CHURCH,<br>
+> JOHN PAUL TO LEUKEMIA,<br>
+> DOMINIC, PULLED AWAY FROM US<br>
+> BY DIVORCE MONEY AND CONTEMPT,<br>
+> 
+> AND MIKE CARDIN,<br>
+> MIKE CARDIN,<br>
+> MIKE CARDIN WITH NO EXCUSE,<br>
+> MIKE CARDIN WITH NO MERCY,<br>
+> MIKE CARDIN MY BEST FRIEND.<br>
+> 
+> MIKE CARDIN TO BUTLER HOSPITAL.<br>
+> TO BUTLER HOSPITAL.<br>
+> 
+> MIKE CARDIN TO BUTLER,<br>
+> TO BUTLER, TO BUTLER, TO BUTLER, TO ME,<br>
+> TO THE PILLS, TO THE PILLS, TO THE PILLS, TO ME.<br>
+> 
+> TO DEAD MUSICIANS! DEAD HANDS! BIG BROTHER!<br>
+> TO THE BOOMING "FUCK YOU!" FROM THE SKY!<br>
+> TO THE INEVITABILITY AND THE SIMPLE SURENESS<br>
+> THAT LIFE DOES NOT WANT YOU, WILL BREAK YOU SOON!<br>
+> IT WAS MUCH TOO MUCH FOR YOU TO EVEN TRY,<br>
+> MIKE CARDIN,<br>
+> THE PERFECT,<br>
+> INEXPLICABLE,<br>
+> AND ETERNAL,<br>
+> FAILURE.<br>
+> 
+> Who lives to this day.<br>
+> I have seen him just this year.<br>
+> 
+> I know that Katie lives too.<br>
+> I know that Rena lives with her.<br>
+> 
+> I pray that Adrian is gone.<br>
+> And that Rena was never old enough to remember him.<br>
+> 
+> I know that Rena was never old enough to remember me.<br>
+> I hope she has seen a picture of me holding her.<br>
+> 
+> I have a picture of her, in my wallet.<br>
+> Last month, for a couple of weeks,<br>
+> I forgot the name of the baby in my wallet.<br>
+> 
+> The baby's name is Rena.<br>
+> 
+> I know that I will love them both until I die.<br>
+> 
+> I went back to college and dropped out.<br>
+> Katie went back to figuring things out,<br>
+> but was missing me.<br>
+> 
+> I couldn't miss her back,<br>
+> for a while.<br>
+> 
+> Now things are slower.<br>
+> 
+> I know Katie doesn't fuck with drugs anymore.<br>
+> I know I mostly don't either.<br>
+> 
+> I'm sorry for everything.<br>
+> 
+> Kate.<br>
+> 
+> Rena.
+
+:::

@@ -1,0 +1,49 @@
+---
+title: "Building Intuition for tf-idf Weighting"
+subtitle: "How Can We Get Computers to Understand Linguistic 'Meaning'?"
+image: "images/snowshoe.jpg"
+date: 2025-05-06
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - Natural Language Processing
+---
+
+## What Makes a Word a "*Key*word"?
+
+In the field of Natural Language Processing, one of the most fundamental (and fascinating) tools which you learn in your first few weeks of an NLP class is the notion of ["tf-idf weighting"](https://en.wikipedia.org/wiki/Tf%E2%80%93idf). When I've led classes/workshops on NLP, one of my favorite things to do is to lay out the following high-level pieces of the tf-idf "puzzle", to nudge students towards developinging their *own* tf-idf equation from scratch, drawing solely on their intuition rather than an equation tossed at them from out of nowhere.
+
+The overarching goal is an algorithm that a computer could use to detect **"key" words within a text**. For example, consider the first sentence in the Wikipedia article for ["basketball"](https://en.wikipedia.org/wiki/Basketball):
+
+> *Basketball is a team sport in which two teams compete with the primary objective of shooting a basketball through the defender's hoop, while preventing the opposing team from shooting through their own hoop.*^[I've simplified the sentence a lot for ease-of-reading here!]
+
+The challenge is, how can we program a computer to derive information about the **relative importance** of individual **words** in that sentence with respect to the **concept of *basketball***? When *you* read that sentence, your brain is likely able to pick out:
+
+* Words like "sport", "teams", and "hoop" as being directly pertinent to the semantic meaning of basketball,
+* Words like "is", "of", or "through" as being more generally useful across many different topics, and
+* Words like "objective" and "preventing" as being somewhat in-between these two extremes: pertinent to a wider range of concepts than just basketball or sports (in contrast with e.g. "hoop"), but not as abstract/general as syntactic connectors like "is" or "of".
+
+This vague categorization of words within a sentence is "intuitive" for most English speakers (it's a task we perform many times per day, with little need for conscious attention most of the time, whenever we read), yet it turns out to be far from trivial to take this semi-conscious process and turn it into an explicit algorithm that a computer can carry out!
+
+## Two Halfway-There Attempts
+
+To get a sense for this, consider two approaches that might initially come to mind, but which turn out to be not so helpful upon further reflection:
+
+* Attempt 1: A word which appears a bunch of times in the "Basketball" article must be very relevant to the concept of basketball, so, let's draw on that intuition and just use the frequency of a word $w$ in a document $d$ as our measure of the importance of $w$ with respect to $d$.
+  * Thus, for example, if 20% of all the words in $d$ are $w_1$, but only 1% of the words in $d$ are $w_2$, then we'll estimate that $w_1$ is 20 times more central to the concept of $d$ than $w_2$.
+
+The problem with Approach 1 is that, since the document is written in natural-language English, the most frequent words are likely to be words like "the", "but", or "and", so that Approach 1 will likely just say that these three words are the most important words for understanding e.g. Basketball, vacuum cleaners, King Louis XVI, and everything else...
+
+So, it seems like we're going to have to "zoom out" from just the Basketball article, and take into account the distribution of words across English more broadly. One way we might try to achieve this is to place high weight on words which are *unique* to the Basketball article:
+
+* Attempt 2: To avoid placing high importance on words which appear frequently across English in general, let's instead construct a measure of word $w$'s importance with respect to document $d$ that *diminishes* as we see $w$ appearing in more and more *other* documents besides $d$: let's try $1/|\{D: w \in D\}|$, where $\{D: w \in D\}$ is the set of all documents which contain $w$ at least once, and $| \cdot |$ is the *cardinality* operator, so that this becomes one over the total number of documents containing $w$.
+  * For example, if the word "hoop" appears only in the articles for "Basketball" and ["Hoop Rolling"](https://en.wikipedia.org/wiki/Hoop_rolling), its importance score will be $1/2$, whereas if the word "and" appears in 1000 documents, its importance score will be much lower at $1/1000$.
+
+The problems with Attempt 2 are... perhaps more subtle than the problems with Attempt 1. But, one that you may notice immediately is that this approach will view **rare typos** within a document as immensely important for understanding document! For example, if "and" appears in 1000 documents, but the typo "annd" appears only in the "Basketball" article, this approach will assign "annd" the highest possible importance score relative to the concept of Basketball.
+
+## Synthesizing Two Halfway-Theres into a Wholeway-There!
+
+tf-df roughly boils down to just **text frequency / document frequency**, where we add logs to things to take into account how the collection of all possible **words** may be much larger (and more skewed in distribution!) than the collection of documents in a corpus.
+

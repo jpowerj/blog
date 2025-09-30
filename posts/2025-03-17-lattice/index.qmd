@@ -17,3 +17,6 @@ categories:
 > Fall through the snow.
 
 From Dave Eggers' *A Heartbreaking Work of Staggering Genius*.
+
+![](images/snowshoe.jpg){fig-align="center"}
+

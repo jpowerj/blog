@@ -1,0 +1,70 @@
+---
+title: "Top 10 Unknown Unknowns for Americans to Un-Unknow"
+image: "images/snowshoe.jpg"
+date: 2025-05-06
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - History
+  - Imperialism
+---
+
+## What Makes a Piece of History an "Unknown Unknown" (To Americans, At Least)?
+
+In the field of Natural Language Processing, one of the most fundamental (and fascinating) tools which you learn in your first few weeks of an NLP class is the notion of ["tf-idf weighting"](../2025-05-06-tf-idf/). The genius of this measure is that it quantifies the importance of a word relative to a given text by **balancing** (via a ratio) the word's frequency in the text to the word's frequency across all texts.
+
+To choose topics for this post, I have a similar balancing measure in mind: an important "unknown unknown" for Americans is one that (a) is important for understanding the US's place in the world specifically, but (b) is rarely if ever learned (much less thought-through) by Americans, even those who read helpfully-critical books like Howard Zinn's *A People's History of the United States*.^[Among relatively-popular books that are newer than Zinn's, Daniel Immerwahr's [*How To Hide An Empire*](https://us.macmillan.com/books/9781250251091/howtohideanempire/) stands out for being filled to the brim with American unknown unknowns!].
+
+## 1. The "Nayirah Testimony" and First Iraq War Atrocity Propaganda
+
+The number-one most important example here is, to me, an easy and obvious choice. It was a PR stunt, carried out by a PR firm contracted by the US government for this express purpose, and executed in such a sloppy and transparently falsifiable manner that it could only have worked in the US. And work it did. In fact, it worked so well that it has remained right at the top of the US government's playbook, its go-to move whenever it needs to quickly drum up support for some new regime change operation somewhere in the Middle East.
+
+https://en.wikipedia.org/wiki/Nayirah_testimony
+
+## 2. WWII Inuit Concentration Camps
+
+The US government's herding of Japanese citizens into concentration camps during WWII obviously qualifies as a centrally-important event for comprehending the core thread of white supremacy and imperial repression which runs throughout US history, connecting our past to our present and auguring more to come in the future. And yet, at least some tiny speck of understanding around this event has entered the minds of some public school students in the US: I learned about Japanese """internment""" camps in both Washington, DC and Montgomery County, Maryland public schools.
+
+What I did *not* learn about, in *either* of these public school systems, was the even more horrific punishment-for-existing which was meted out to another group concentrated around the Pacific borders of the US: Native Alaskans.
+
+## 3. Building a "Confederate Empire" in Latin America
+
+https://archive.org/details/southerndreamofc0000mayr_m7w7
+
+## 4. The Ethnic Cleansing of the Chagos Islands, to Make Way for the Diego Garcia Airbase
+
+## 5. The Orlando Letelier Assassination in Dupont Circle
+
+## 6. War Against All Puerto Ricans / Vieques
+
+## 7. Injecting Guatemalan Women with Syphilis
+
+Bonus: Chemical testing on stuck-up non-patriots like The Entire Population of San Francisco and The Entire Ridership of the New York City Subway System Over Multiple Days
+
+## 8. Support for Pol Pot
+
+Pol Pot: if the name comes across the ears of Americans, and if they recognize it as a name at all, they likely recall some horrible dictator somewhere in Asia who killed millions of his own people (like Mao, or Kim Jong-Il from that one funny ass puppet movie, but certainly not like Suharto, since Americans don't know who that is or what he did...). So, given that the US stands for freedom and democracy everywhere, if you ask most Americans "what country finally overthrew this evil dictator via military intervention?", a lightbulb may go off in their head: "Oh, wait, ok the US did that right? That's what we do with our military, we overthrow the bad guys and install the good guys, right?"
+
+Unfortunately, not only was it *not* the freedom-loving US military who finally intervened to depose Pol Pot and end the Cambodian Genocide, it was actually a country that where this freedom-loving US military had just recently finished up massacring millions of poor peasants... That's right folks, it was Evil Communist Vietnam who militarily intervened to depose Pol Pot and end the Cambodian Genocide!
+
+## 9. The "Embargo" on (aka Decades-Long Covert Military Offensive Against) Cuba
+
+## 10. Pearl Harbor was Not an Attack on "the US", but one of nine attacks specifically against US Military occupation of colonial holdings (incl. the Philippines)
+
+## 11. The Allied Victory in WWII was paid for with the blood of Evil Communist Russians, not Americans
+
+And, whereas the USSR tried and executed Nazis (see, e.g., Putin's career with the KGB in East Germany), the US aided their escape and paid them handsomely to work for us domestically as scientists or internationally as mercenaries and/or military strategists.
+
+Bonus: Israel!
+
+## 11. Sabra and Shatila
+
+## 12. Apartheid Israeli-Apartheid South African "Race Bomb"
+
+## 13. Israel Sells a Nuke to Apartheid South Africa
+
+Bonus: The UK!
+
+## 14. Her Majesty's Royal Car Bomb
