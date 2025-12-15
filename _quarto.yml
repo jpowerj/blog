@@ -1,16 +1,6 @@
 project:
   type: website
   output-dir: docs
-      
-format: 
-  html:
-    toc: true
-    theme:
-      light: default
-      dark: darkly
-    css: styles.css
-    include-in-header:
-      text: "<link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap' rel='stylesheet'>"
 website:
   title: "I Am Become Jeff"
   favicon: favicon.png
@@ -24,3 +14,13 @@ website:
         href: "https://jpj.georgetown.domains"
 execute: 
   warning: false
+format: 
+  html:
+    toc: true
+    mainfont: "Karmina"
+    theme:
+      light: default
+      dark: darkly
+    css: styles.css
+    include-in-header:
+      text: "<link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap' rel='stylesheet'>"

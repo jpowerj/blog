@@ -79,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-0d4a9d19931feb4fee1ddab4b2489000.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-05b0077c2f27bc7c80806a7e635f3014.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-a74786c31480e868977b1aa5f88d6b6d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-05b0077c2f27bc7c80806a7e635f3014.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -567,7 +567,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Then, because my brain is forever stuck in an object-oriented mode (and because I’m teaching <em>Data Structures in Python</em> next semester!), I decided to keep track of each team’s record throughout each season using custom <code>Season</code> and <code>SeasonTeam</code> objects:</p>
-<div id="0810c4a1" class="cell" data-execution_count="2">
+<div id="b9dec5a8" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the range of seasons from the df</span></span>
@@ -938,7 +938,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </div>
 </div>
 <p>So that now we can find the <strong>overall</strong> proportion of all games where the team with the better record indeed won:</p>
-<div id="d89edfef" class="cell" data-execution_count="8">
+<div id="b92d2dff" class="cell" data-execution_count="8">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>result_comp_df[<span class="st">'better_won'</span>].mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -948,7 +948,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </div>
 </div>
 <p>And then we can use Pandas’ <code>groupby()</code> to compute this mean for each season:</p>
-<div id="4bb54d15" class="cell" data-execution_count="9">
+<div id="53342ab0" class="cell" data-execution_count="9">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itables <span class="im">import</span> show</span>
@@ -958,7 +958,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </details>
 <div class="cell-output cell-output-display">
 <!--| quarto-html-table-processing: none -->
-<table id="itables_6f03cae4_4cb7_4a06_ba6d_18cb543aa2bd"><tbody><tr>
+<table id="itables_fde85a51_cfce_4896_ba3e_ee223c41a31a"><tbody><tr>
     <td style="vertical-align:middle; text-align:left">
     <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
     <g style="fill:#d9d7fc">
@@ -1024,11 +1024,11 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 <script type="module">
     import { ITable, jQuery as $ } from 'https://www.unpkg.com/dt_for_itables@2.4.0/dt_bundle.js';
 
-    document.querySelectorAll("#itables_6f03cae4_4cb7_4a06_ba6d_18cb543aa2bd:not(.dataTable)").forEach(table => {
+    document.querySelectorAll("#itables_fde85a51_cfce_4896_ba3e_ee223c41a31a:not(.dataTable)").forEach(table => {
         if (!(table instanceof HTMLTableElement))
             return;
 
-        let dt_args = {"layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "text_in_header_can_be_selected": true, "classes": ["display", "nowrap"], "order": [], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>season</th>\n      <th>better_won</th>\n    </tr>\n  </thead></table>", "data_json": "[[1987, 0.541667], [1988, 0.568182], [1989, 0.569061], [1990, 0.621622], [1991, 0.689266], [1992, 0.647668], [1993, 0.574713], [1994, 0.596591], [1995, 0.583333], [1996, 0.609137], [1997, 0.606061], [1998, 0.664948], [1999, 0.60199], [2000, 0.641148], [2001, 0.613208], [2002, 0.592417], [2003, 0.64455], [2004, 0.619512], [2005, 0.64878], [2006, 0.606635], [2007, 0.67907], [2008, 0.620853], [2009, 0.62844], [2010, 0.563981], [2011, 0.630841], [2012, 0.602871], [2013, 0.613861], [2014, 0.640777], [2015, 0.617225], [2016, 0.634703], [2017, 0.631579], [2018, 0.590698], [2019, 0.655814], [2020, 0.674312], [2021, 0.60177]]"};
+        let dt_args = {"layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "text_in_header_can_be_selected": true, "classes": ["display", "nowrap"], "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "order": [], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>season</th>\n      <th>better_won</th>\n    </tr>\n  </thead></table>", "data_json": "[[1987, 0.541667], [1988, 0.568182], [1989, 0.569061], [1990, 0.621622], [1991, 0.689266], [1992, 0.647668], [1993, 0.574713], [1994, 0.596591], [1995, 0.583333], [1996, 0.609137], [1997, 0.606061], [1998, 0.664948], [1999, 0.60199], [2000, 0.641148], [2001, 0.613208], [2002, 0.592417], [2003, 0.64455], [2004, 0.619512], [2005, 0.64878], [2006, 0.606635], [2007, 0.67907], [2008, 0.620853], [2009, 0.62844], [2010, 0.563981], [2011, 0.630841], [2012, 0.602871], [2013, 0.613861], [2014, 0.640777], [2015, 0.617225], [2016, 0.634703], [2017, 0.631579], [2018, 0.590698], [2019, 0.655814], [2020, 0.674312], [2021, 0.60177]]"};
         new ITable(table, dt_args);
     });
 </script>
@@ -1038,7 +1038,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 <section id="plotting-results" class="level2">
 <h2 class="anchored" data-anchor-id="plotting-results">Plotting Results</h2>
 <p>First, plotting these means as a line graph gives some insight, but is a bit messy due to the season-to-season volatility:</p>
-<div id="8036280b" class="cell" data-execution_count="10">
+<div id="184427fd" class="cell" data-execution_count="10">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1060,7 +1060,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </div>
 </div>
 <p>We <em>can</em> start to see a general trend, though, if we plot a line of best fit, with the important caveats that this is to indicate a general trend, <em>not</em> that we actually think the underlying data-generating process is linear!</p>
-<div id="99431b36" class="cell" data-execution_count="11">
+<div id="33e57fc9" class="cell" data-execution_count="11">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>season_regplot <span class="op">=</span> sns.regplot(x<span class="op">=</span><span class="st">'season'</span>, y<span class="op">=</span><span class="st">'better_won'</span>, data<span class="op">=</span>mean_by_season, ci<span class="op">=</span><span class="dv">89</span>) <span class="co">#, lowess=True)</span></span>

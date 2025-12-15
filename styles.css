@@ -1,21 +1,11 @@
 /* css styles */
+@font-face {
+  font-family: "Karmina";
+  src: url("/assets/Karmina_Regular.otf") format("opentype");
+}
 
 .navbar {
   background-color: #bd5d38 !important;
-}
-
-div.quarto-post a {
-  color: var(--bs-body-color) !important;
-}
-
-div.sourceCode {
-  /* background-color: var(--bs-emphasis-color) !important; */
-  background-color: var(--code-bg);
-  /* filter: brightness(var(--code-bg-brightness)); */
-}
-
-div.quarto-post .listing-category {
-  color: var(--bs-emphasis-color) !important;
 }
 
 #quarto-header {
