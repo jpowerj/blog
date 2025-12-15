@@ -1,7 +1,9 @@
 ---
 title: "A Master's Tool Dismantling a Master's House"
-image: "images/snowshoe.jpg"
+image: "images/mandela_castro_crop.jpg"
 date: 2025-10-18
+bibliography: "../../Blog.bib"
+csl: "../../chicago-17-no-url.csl"
 format:
   html:
     df-print: kable
@@ -14,3 +16,12 @@ People who know me from various angles still pretty much all know that I'm oddly
 
 The reason I say "afterlives" is because, in true ["death of the author"](https://en.wikipedia.org/wiki/The_Death_of_the_Author) fashion, the phrase is most often invoked *not* in the context of Lorde's original topic (roughly speaking, the exclusion of queer women of color from "mainstream" feminist thought), but instead in heated arguments within social movements about [the role of **nonviolence**](https://derrickjensen.org/2007/01/introduction-to-pacifism-as-pathology/) in social change.
 
+And, the other day I realized that the ANC's plan to end apartheid, hatched by none other than Nelson Mandela (one of my favorite enders-of-oppression in all of history... see [this now-published post](../2025-12-15-agreeing-to-disagree/)!), provides maybe the best example I've ever seen of a master's tool -- the tactics and strategies utilized by the pre-Israeli Yishuv to terrorize British and Palestinians into submission as they built the future state of Israel -- being turned back against the master: in this case, turned back against Israel's closest ally, Apartheid South Africa, in the form of Mandela's **"M-Plan"**:
+
+> Ironically, its [the M-Plan's] shape was based on a blueprint drawn up by Nelson Mandela nearly a quarter-century earlier, a plan which in turn had borrowed from the Zionist Irgun guerrilla experience in British-occupied Palestine.
+
+The quote is from [@davis_apartheids_1987], an actual must-read for understanding how exactly the ANC (though, specifically, the ANC alongside the SACP and their joint armed wing, [uMkhonto we Sizwe](https://en.wikipedia.org/wiki/UMkhonto_weSizwe)) brought about the end of Apartheid... And while we're talking about ending Apartheid... may as well read this book as well 🤔:
+
+![@mandela_how_1991](images/mandela_castro.jpg){fig-align="center" width="50%"}
+
+And with that... Gotta blast!

@@ -1,6 +1,6 @@
 ---
 title: "You Can't 'Agree to Disagree' on a Moving Train, Unfortunately"
-image: "images/snowshoe.jpg"
+image: "images/louis-xvi.jpeg"
 date: 2025-12-15
 bibliography: "../../Blog.bib"
 format:

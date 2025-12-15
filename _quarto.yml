@@ -4,18 +4,16 @@ project:
       
 format: 
   html:
-    highlight-style:
-      light: "Breeze Light"
-      dark: "Breeze Dark"
     toc: true
-    theme: default
+    theme:
+      light: default
+      dark: darkly
     css: styles.css
     include-in-header:
-      text: "<script src='https://code.jquery.com/jquery-3.7.1.slim.min.js'></script><link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'><script type='module' src='/dark-mode-toggle.mjs'></script><script src='/jjcustom.js'></script><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap' rel='stylesheet'>"
+      text: "<link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap' rel='stylesheet'>"
 website:
   title: "I Am Become Jeff"
   favicon: favicon.png
-  # body-footer: "Made by <a href='https://cs.stanford.edu/~jjacobs3' target='_blank'>Jeff Jacobs</a>, 2023, using <a href='https://quarto.org/' target='_blank'>Quarto</a>."
   navbar:
     pinned: true
     right:
@@ -24,7 +22,5 @@ website:
       - text: "GU Homepage<i class='bi bi-box-arrow-up-right ps-2'></i>"
         #icon: box-arrow-up-right
         href: "https://jpj.georgetown.domains"
-      # - text: "<dark-mode-toggle id='theme-toggle' class='slider' appearance='toggle' permanent='true'></dark-mode-toggle>"
-      #   href: "#"
 execute: 
   warning: false
