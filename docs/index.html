@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,13 +34,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-98536fdad01c4ee2addcb24ed102d939.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1836e2477db27d6ec0440935c02e112e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -113,7 +114,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -139,6 +140,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">I Am Become Jeff</span>
     </a>
@@ -170,7 +173,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="QXJ0">Art <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q2hhc2luZyUyMHRoZSUyME93bCUyMG9mJTIwTWluZXJ2YQ==">Chasing the Owl of Minerva <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YSUyMFNjaWVuY2U=">Data Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGVwcmVzc2lvbg==">Depression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RW50cm9weQ==">Entropy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmluZGluZyUyME15JTIwT3duJTIwVm9pY2U=">Finding My Own Voice <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R0lT">GIS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW5lcXVhbGl0eQ==">Inequality <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGlmZQ==">Life <span class="quarto-category-count">(4)</span></div><div class="category" data-category="TXVzaWM=">Music <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9ldHJ5">Poetry <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U2VncmVnYXRpb24=">Segregation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3BvcnRz">Sports <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGhlJTIwV29ybGQ=">The World <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXJiYW4lMjBTdHVkaWVz">Urban Studies <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="QXJ0">Art <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q2hhc2luZyUyMHRoZSUyME93bCUyMG9mJTIwTWluZXJ2YQ==">Chasing the Owl of Minerva <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YSUyMFNjaWVuY2U=">Data Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGVwcmVzc2lvbg==">Depression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RW50cm9weQ==">Entropy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXRoaWNz">Ethics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmluZGluZyUyME15JTIwT3duJTIwVm9pY2U=">Finding My Own Voice <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R0lT">GIS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGlzdG9yeQ==">History <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW5lcXVhbGl0eQ==">Inequality <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGlmZQ==">Life <span class="quarto-category-count">(4)</span></div><div class="category" data-category="TXVzaWM=">Music <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG9ldHJ5">Poetry <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U2VncmVnYXRpb24=">Segregation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3BvcnRz">Sports <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGhlJTIwV29ybGQ=">The World <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VXJiYW4lMjBTdHVkaWVz">Urban Studies <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
@@ -183,7 +186,73 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TGlmZQ==" data-listing-date-sort="1742184000000" data-listing-file-modified-sort="1742268890323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="123">
+<div class="quarto-post image-right" data-index="0" data-categories="RXRoaWNz" data-listing-date-sort="1765774800000" data-listing-file-modified-sort="1765793593391" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="508">
+<div class="thumbnail"><a href="./posts/2025-12-15-agreeing-to-disagree/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/2025-12-15-agreeing-to-disagree/images/snowshoe.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2025-12-15-agreeing-to-disagree/index.html" class="no-external">You Can’t ‘Agree to Disagree’ on a Moving Train, Unfortunately</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/2025-12-15-agreeing-to-disagree/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RXRoaWNz'); return false;">Ethics</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/2025-12-15-agreeing-to-disagree/index.html" class="no-external">
+There’s a book I read and use every year for the very beginning of my data ethics course, R. M. Hare’s <em>The Language of Morals</em> <span class="citation" data-cites="hare_language_1952">(Hare 1952)</span>. The reason I love it is, I’m…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/2025-12-15-agreeing-to-disagree/index.html" class="no-external">
+<div class="listing-date">
+Dec 15, 2025
+</div>
+<div class="listing-author">
+Jeff Jacobs
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="SGlzdG9yeQ==" data-listing-date-sort="1760760000000" data-listing-file-modified-sort="1765791638208" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="91">
+<div class="thumbnail"><a href="./posts/2025-10-18-mandela/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/2025-10-18-mandela/images/snowshoe.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2025-10-18-mandela/index.html" class="no-external">A Master’s Tool Dismantling a Master’s House</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/2025-10-18-mandela/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('SGlzdG9yeQ=='); return false;">History</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/2025-10-18-mandela/index.html" class="no-external">
+People who know me from various angles still pretty much all know that I’m oddly obsessed with the various “afterlives” of Audre Lorde’s famous statement that “the master’s…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/2025-10-18-mandela/index.html" class="no-external">
+<div class="listing-date">
+Oct 18, 2025
+</div>
+<div class="listing-author">
+Jeff Jacobs
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="TGlmZQ==" data-listing-date-sort="1742184000000" data-listing-file-modified-sort="1742268890323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="123">
 <div class="thumbnail"><a href="./posts/2025-03-17-lattice/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/2025-03-17-lattice/images/snowshoe.jpg" class="thumbnail-image">
@@ -216,7 +285,7 @@ Jeff Jacobs
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="TXVzaWM=" data-listing-date-sort="1736830800000" data-listing-file-modified-sort="1736838668375" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="608">
+<div class="quarto-post image-right" data-index="3" data-categories="TXVzaWM=" data-listing-date-sort="1736830800000" data-listing-file-modified-sort="1736838668375" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="608">
 <div class="thumbnail"><a href="./posts/2025-01-14-syncopation/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/2025-01-14-syncopation/images/cube.png" class="thumbnail-image">
@@ -249,7 +318,7 @@ Jeff Jacobs
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="VGhlJTIwV29ybGQ=" data-listing-date-sort="1734843600000" data-listing-file-modified-sort="1734865206373" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1322">
+<div class="quarto-post image-right" data-index="4" data-categories="VGhlJTIwV29ybGQ=" data-listing-date-sort="1734843600000" data-listing-file-modified-sort="1734865206373" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1322">
 <div class="thumbnail"><a href="./posts/2024-12-22-observational-equivalence/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/2024-12-22-observational-equivalence/images/equivalence.png" class="thumbnail-image">
@@ -282,7 +351,7 @@ Jeff Jacobs
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="TGlmZSUyQ0RlcHJlc3Npb24=" data-listing-date-sort="1731992400000" data-listing-file-modified-sort="1732135900322" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1366">
+<div class="quarto-post image-right" data-index="5" data-categories="TGlmZSUyQ0RlcHJlc3Npb24=" data-listing-date-sort="1731992400000" data-listing-file-modified-sort="1732135900322" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1366">
 <div class="thumbnail"><a href="./posts/2024-11-19_depression_pt2/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/2024-11-19_depression_pt2/images/schoenberg_crop.jpg" class="thumbnail-image">
@@ -317,7 +386,7 @@ Jeff Jacobs
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="QXJ0JTJDUG9ldHJ5" data-listing-date-sort="1720065600000" data-listing-file-modified-sort="1759207389414" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1118">
+<div class="quarto-post image-right" data-index="6" data-categories="QXJ0JTJDUG9ldHJ5" data-listing-date-sort="1720065600000" data-listing-file-modified-sort="1759208627330" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1118">
 <div class="thumbnail"><a href="./posts/2024-07-04-kate/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/2024-07-04-kate/images/bdolan.jpg" class="thumbnail-image">
@@ -352,7 +421,7 @@ Jeff Jacobs
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="QXJ0JTJDUG9ldHJ5" data-listing-date-sort="1719892800000" data-listing-file-modified-sort="1719973814927" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="594">
+<div class="quarto-post image-right" data-index="7" data-categories="QXJ0JTJDUG9ldHJ5" data-listing-date-sort="1719892800000" data-listing-file-modified-sort="1719973814927" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="594">
 <div class="thumbnail"><a href="./posts/2024-07-02-knieval/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/2024-07-02-knieval/images/knievel.jpg" class="thumbnail-image">
@@ -387,7 +456,7 @@ Jeff Jacobs
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="TGlmZSUyQ0ZpbmRpbmclMjBNeSUyME93biUyMFZvaWNl" data-listing-date-sort="1715832000000" data-listing-file-modified-sort="1715954358335" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="982">
+<div class="quarto-post image-right" data-index="8" data-categories="TGlmZSUyQ0ZpbmRpbmclMjBNeSUyME93biUyMFZvaWNl" data-listing-date-sort="1715832000000" data-listing-file-modified-sort="1715954358335" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="982">
 <div class="thumbnail"><a href="./posts/2024-05-16-suburban-childhoods/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/2024-05-16-suburban-childhoods/images/burn_my_memories.png" class="thumbnail-image">
@@ -422,7 +491,7 @@ Jeff Jacobs
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="TGlmZSUyQ0NoYXNpbmclMjB0aGUlMjBPd2wlMjBvZiUyME1pbmVydmE=" data-listing-date-sort="1714968000000" data-listing-file-modified-sort="1719973155030" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="377">
+<div class="quarto-post image-right" data-index="9" data-categories="TGlmZSUyQ0NoYXNpbmclMjB0aGUlMjBPd2wlMjBvZiUyME1pbmVydmE=" data-listing-date-sort="1714968000000" data-listing-file-modified-sort="1719973155030" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="377">
 <div class="thumbnail"><a href="./posts/2024-05-06-a-meaningful-passage/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/2024-05-06-a-meaningful-passage/images/light_pillars.jpg" class="thumbnail-image">
@@ -457,7 +526,7 @@ Jeff Jacobs
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="U3BvcnRzJTJDRW50cm9weSUyQ0RhdGElMjBTY2llbmNl" data-listing-date-sort="1702530000000" data-listing-file-modified-sort="1736838346077" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1861">
+<div class="quarto-post image-right" data-index="10" data-categories="U3BvcnRzJTJDRW50cm9weSUyQ0RhdGElMjBTY2llbmNl" data-listing-date-sort="1702530000000" data-listing-file-modified-sort="1736838346077" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1861">
 <div class="thumbnail"><a href="./posts/2023-12-14-nfl-parity/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/2023-12-14-nfl-parity/images/volatility.jpg" class="thumbnail-image">
@@ -494,7 +563,7 @@ Jeff Jacobs
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="VXJiYW4lMjBTdHVkaWVzJTJDR0lTJTJDU2VncmVnYXRpb24lMkNJbmVxdWFsaXR5" data-listing-date-sort="1701061200000" data-listing-file-modified-sort="1736838061806" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1297">
+<div class="quarto-post image-right" data-index="11" data-categories="VXJiYW4lMjBTdHVkaWVzJTJDR0lTJTJDU2VncmVnYXRpb24lMkNJbmVxdWFsaXR5" data-listing-date-sort="1701061200000" data-listing-file-modified-sort="1736838061806" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1297">
 <div class="thumbnail"><a href="./posts/2023-11-27-dc-segregation/index.html" class="no-external">
 
 <p class="card-img-top"><img src="posts/2023-11-27-dc-segregation/images/dc_income.jpeg"  class="thumbnail-image card-img"/></p>
@@ -587,13 +656,14 @@ Jeff Jacobs
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -1,0 +1,16 @@
+---
+title: "A Master's Tool Dismantling a Master's House"
+image: "images/snowshoe.jpg"
+date: 2025-10-18
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - History
+---
+
+People who know me from various angles still pretty much all know that I'm oddly obsessed with the various "afterlives" of Audre Lorde's famous statement that ["the master's tools will never dismantle the master's house"](https://theanarchistlibrary.org/library/audre-lorde-the-master-s-tools-will-never-dismantle-the-master-s-house).
+
+The reason I say "afterlives" is because, in true ["death of the author"](https://en.wikipedia.org/wiki/The_Death_of_the_Author) fashion, the phrase is most often invoked *not* in the context of Lorde's original topic (roughly speaking, the exclusion of queer women of color from "mainstream" feminist thought), but instead in heated arguments within social movements about [the role of **nonviolence**](https://derrickjensen.org/2007/01/introduction-to-pacifism-as-pathology/) in social change.
+

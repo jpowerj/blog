@@ -15,3 +15,5 @@
 
 .RData
 .Rhistory
+
+**/*.quarto_ipynb
