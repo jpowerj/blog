@@ -11,6 +11,7 @@ format:
 categories:
   - History
   - Sports
+  - Inequality
 ---
 
 ## Race, Class, Colonialism, and the World Cup
