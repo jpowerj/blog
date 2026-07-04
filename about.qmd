@@ -9,9 +9,9 @@ about:
   links:
     - icon: house
       text: "Academic Homepage"
-      href: https://cs.stanford.edu/~jjacobs3
+      href: https://jjacobs.me
     - icon: github
-      text: Github
+      text: GitHub
       href: https://github.com/jpowerj
 ---
 
@@ -19,4 +19,4 @@ Hi, I'm Jeff Jacobs! I am an Assistant Teaching Professor of Data Science and An
 
 I post things here when my brain becomes obsessed with something and needs to get to the bottom of it (since otherwise I annoy friends and family with these things for days on end 😜).
 
-If you are one of my students, however, you may be looking for my <a href='https://jjacobs.me/dsan-resources/' target='_blank'>DSAN Resources page</a>, where I post things that are relevant to Georgetown DSAN students. Otherwise, you can find more on my <a href='https://cs.stanford.edu/~jjacobs3' target='_blank'>academic homepage</a>!
+If you are one of my students, however, you may be looking for my <a href='https://jjacobs.me/dsan-resources/' target='_blank'>DSAN Resources page</a>, where I post things that are relevant to Georgetown DSAN students. Otherwise, you can find more on my <a href='https://jjacobs.me' target='_blank'>academic homepage</a>!
