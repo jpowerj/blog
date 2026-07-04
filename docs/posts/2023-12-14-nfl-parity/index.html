@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.10.3">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>The NFL Has Become (Slightly) More Boring Over Time – I Am Become Jeff</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -69,19 +72,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../favicon.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-05b0077c2f27bc7c80806a7e635f3014.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-a74786c31480e868977b1aa5f88d6b6d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-05b0077c2f27bc7c80806a7e635f3014.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-302fd46e0bbd807994b2d5090a5736c9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-086a2bea7cef95774a881ba8c5e80b6a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-302fd46e0bbd807994b2d5090a5736c9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -567,7 +569,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Then, because my brain is forever stuck in an object-oriented mode (and because I’m teaching <em>Data Structures in Python</em> next semester!), I decided to keep track of each team’s record throughout each season using custom <code>Season</code> and <code>SeasonTeam</code> objects:</p>
-<div id="b9dec5a8" class="cell" data-execution_count="2">
+<div id="4e9c95ce" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the range of seasons from the df</span></span>
@@ -938,7 +940,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </div>
 </div>
 <p>So that now we can find the <strong>overall</strong> proportion of all games where the team with the better record indeed won:</p>
-<div id="b92d2dff" class="cell" data-execution_count="8">
+<div id="09eedd50" class="cell" data-execution_count="8">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>result_comp_df[<span class="st">'better_won'</span>].mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -948,7 +950,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </div>
 </div>
 <p>And then we can use Pandas’ <code>groupby()</code> to compute this mean for each season:</p>
-<div id="53342ab0" class="cell" data-execution_count="9">
+<div id="54ff8e05" class="cell" data-execution_count="9">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itables <span class="im">import</span> show</span>
@@ -958,9 +960,10 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 </details>
 <div class="cell-output cell-output-display">
 <!--| quarto-html-table-processing: none -->
-<table id="itables_fde85a51_cfce_4896_ba3e_ee223c41a31a"><tbody><tr>
-    <td style="vertical-align:middle; text-align:left">
-    <a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
+<table id="itables_1d4817ae_bf6b_4b48_bc59_032ccceffd14">
+  <tbody>
+    <tr>
+      <td style="vertical-align:middle; text-align:left"><a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
     <g style="fill:#d9d7fc">
         <path d="M100,400H500V357H100Z"></path>
         <path d="M100,300H400V257H100Z"></path>
@@ -1017,18 +1020,31 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
     </g>
 </svg>
 </a>
-    Loading ITables v2.6.1 from the internet...
-    (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
-    </tr></tbody></table>
-<link href="https://www.unpkg.com/dt_for_itables@2.4.0/dt_bundle.css" rel="stylesheet">
+        Loading ITables v2.8.1 from the internet...
+        (need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)
+      </td>
+    </tr>
+  </tbody>
+</table>
+<link href="https://www.unpkg.com/dt_for_itables@2.5.5/dt_bundle.css" rel="stylesheet">
 <script type="module">
-    import { ITable, jQuery as $ } from 'https://www.unpkg.com/dt_for_itables@2.4.0/dt_bundle.js';
+    import { ITable, jQuery as $ } from 'https://www.unpkg.com/dt_for_itables@2.5.5/dt_bundle.js';
 
-    document.querySelectorAll("#itables_fde85a51_cfce_4896_ba3e_ee223c41a31a:not(.dataTable)").forEach(table => {
+    document.querySelectorAll("#itables_1d4817ae_bf6b_4b48_bc59_032ccceffd14:not(.dataTable)").forEach(table => {
         if (!(table instanceof HTMLTableElement))
             return;
 
-        let dt_args = {"layout": {"topStart": "pageLength", "topEnd": "search", "bottomStart": "info", "bottomEnd": "paging"}, "text_in_header_can_be_selected": true, "classes": ["display", "nowrap"], "style": {"table-layout": "auto", "width": "auto", "margin": "auto", "caption-side": "bottom"}, "order": [], "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>season</th>\n      <th>better_won</th>\n    </tr>\n  </thead></table>", "data_json": "[[1987, 0.541667], [1988, 0.568182], [1989, 0.569061], [1990, 0.621622], [1991, 0.689266], [1992, 0.647668], [1993, 0.574713], [1994, 0.596591], [1995, 0.583333], [1996, 0.609137], [1997, 0.606061], [1998, 0.664948], [1999, 0.60199], [2000, 0.641148], [2001, 0.613208], [2002, 0.592417], [2003, 0.64455], [2004, 0.619512], [2005, 0.64878], [2006, 0.606635], [2007, 0.67907], [2008, 0.620853], [2009, 0.62844], [2010, 0.563981], [2011, 0.630841], [2012, 0.602871], [2013, 0.613861], [2014, 0.640777], [2015, 0.617225], [2016, 0.634703], [2017, 0.631579], [2018, 0.590698], [2019, 0.655814], [2020, 0.674312], [2021, 0.60177]]"};
+        let dt_args = {
+          "classes": ["display", "nowrap", "compact"],
+          "columnDefs": [{"render": "function (data, type, row, meta) { return type === 'sort' || type === 'type' ? data[1] : data[0]; }", "targets": [1]}],
+          "data_json": "[[1987, [\"0.541667\", 0.5416666666666666]], [1988, [\"0.568182\", 0.5681818181818182]], [1989, [\"0.569061\", 0.569060773480663]], [1990, [\"0.621622\", 0.6216216216216216]], [1991, [\"0.689266\", 0.6892655367231638]], [1992, [\"0.647668\", 0.6476683937823834]], [1993, [\"0.574713\", 0.5747126436781609]], [1994, [\"0.596591\", 0.5965909090909091]], [1995, [\"0.583333\", 0.5833333333333334]], [1996, [\"0.609137\", 0.6091370558375635]], [1997, [\"0.606061\", 0.6060606060606061]], [1998, [\"0.664948\", 0.6649484536082474]], [1999, [\"0.601990\", 0.6019900497512438]], [2000, [\"0.641148\", 0.6411483253588517]], [2001, [\"0.613208\", 0.6132075471698113]], [2002, [\"0.592417\", 0.5924170616113744]], [2003, [\"0.644550\", 0.6445497630331753]], [2004, [\"0.619512\", 0.6195121951219512]], [2005, [\"0.648780\", 0.6487804878048781]], [2006, [\"0.606635\", 0.6066350710900474]], [2007, [\"0.679070\", 0.6790697674418604]], [2008, [\"0.620853\", 0.6208530805687204]], [2009, [\"0.628440\", 0.6284403669724771]], [2010, [\"0.563981\", 0.5639810426540285]], [2011, [\"0.630841\", 0.6308411214953271]], [2012, [\"0.602871\", 0.6028708133971292]], [2013, [\"0.613861\", 0.6138613861386139]], [2014, [\"0.640777\", 0.6407766990291263]], [2015, [\"0.617225\", 0.6172248803827751]], [2016, [\"0.634703\", 0.634703196347032]], [2017, [\"0.631579\", 0.631578947368421]], [2018, [\"0.590698\", 0.5906976744186047]], [2019, [\"0.655814\", 0.6558139534883721]], [2020, [\"0.674312\", 0.6743119266055045]], [2021, [\"0.601770\", 0.6017699115044248]]]",
+          "keys_to_be_evaluated": [["columnDefs", 0, "render"]],
+          "layout": {"bottomEnd": "paging", "bottomStart": "info", "topEnd": "search", "topStart": "pageLength"},
+          "order": [],
+          "style": {"caption-side": "bottom", "margin": "auto", "table-layout": "auto", "width": "auto"},
+          "table_html": "<table><thead>\n    <tr style=\"text-align: right;\">\n      \n      <th>season</th>\n      <th>better_won</th>\n    </tr>\n  </thead></table>",
+          "text_in_header_can_be_selected": true
+        };
         new ITable(table, dt_args);
     });
 </script>
@@ -1038,7 +1054,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 <section id="plotting-results" class="level2">
 <h2 class="anchored" data-anchor-id="plotting-results">Plotting Results</h2>
 <p>First, plotting these means as a line graph gives some insight, but is a bit messy due to the season-to-season volatility:</p>
-<div id="184427fd" class="cell" data-execution_count="10">
+<div id="ea0815b8" class="cell" data-execution_count="10">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1054,13 +1070,13 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-11-output-1.png" width="598" height="449" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-11-output-1.png" width="598" height="450" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>We <em>can</em> start to see a general trend, though, if we plot a line of best fit, with the important caveats that this is to indicate a general trend, <em>not</em> that we actually think the underlying data-generating process is linear!</p>
-<div id="33e57fc9" class="cell" data-execution_count="11">
+<div id="1399f2d2" class="cell" data-execution_count="11">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>season_regplot <span class="op">=</span> sns.regplot(x<span class="op">=</span><span class="st">'season'</span>, y<span class="op">=</span><span class="st">'better_won'</span>, data<span class="op">=</span>mean_by_season, ci<span class="op">=</span><span class="dv">89</span>) <span class="co">#, lowess=True)</span></span>
@@ -1073,7 +1089,7 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-12-output-1.png" width="598" height="449" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-12-output-1.png" width="598" height="450" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1187,6 +1203,13 @@ dict_keys([1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 199
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

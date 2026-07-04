@@ -1,0 +1,51 @@
+---
+title: "Analogies at War: Israel, South Africa, and Liberia"
+image: "images/analogies.jpeg"
+date: 2026-05-13
+bibliography: "../../Blog.bib"
+csl: "../../chicago-17-no-url.csl"
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - History
+---
+
+## The Dangers of Analogizing
+
+Lately, before launching into my nightly reading ritual where I deep-dive one of the ultra-specific episodes of history I'm obsessed with, I've been consciously trying to challenge myself to avoid forcing new information into preconceived "boxes", by way of analogies to historical things I might already know about.
+
+The issue — one that becomes especially apparent if the reading involves primary US diplomatic sources — is that politicians and diplomats *themselves* process and act on the world by way of these same metaphors. This means that, unless you have some kind of short-circuit-the-overthinking technique that I definitely do not have, the avoiding-metaphors quest becomes twice as hard: understanding how *their* metaphorical schemas may have nudged *them* towards some tragic diplomatic act, while simultaneously trying to prevent your *own* metaphorical schemas from nudging *your* interpretation towards some pre-determined conclusion^[Personally, the notion of drawing some pre-determined conclusion -- e.g., not changing my mind about anything at all -- after absorbing hundreds of pages of new information scares the shit out of me. To me that pretty much represents "intellectual death": if I'm just always going to draw the exact same highly-predicable conclusions regardless of content, neural plasticity has essentially ended; I'm trapped in a frozen worldview for the rest of my life 😳. No bueno!].
+
+With all that said, my most recent deep-dive has been re-reading Piero Gleijeses' two-volume history of Cuba's foreign policy, which is absolutely chock-full of (a) metaphors being made by policymakers, and (b) metaphors "emerging" from the events to things I already know about, to a degree that's difficult to ignore! So, to try and sort out exactly these two "levels" of metaphor-making, I'm using this post as an opportunity to flesh out these connections: in what ways do the metaphors "fit the data", and in what ways might they instead be leading me astray in understanding this history?
+
+## 1978-1982: South Africa in Angola, Israel in Lebanon
+
+Neither of these histories is very well-known, honestly, but over the course of... however long I was having day-to-day discussions with friends in Palestine for example, Israel's 1982 invasion of Lebanon (especially the subsequent destruction of Beirut, and the systematic mass killings of Palestinians in the Sabra and Shatila refugee camps) was more well-known than the astoundingly-similar South African atrocities in Angola over the exact same period^[Although these most-well-known horrors that Israel rained down upon Lebanon occurred in 1982, they were in fact preceded by a ["practice run" in 1978](https://en.wikipedia.org/wiki/1978_South_Lebanon_conflict), which "only" killed thousands of Lebanese and Palestinians and "only" displaced several hundred thousand. Which means that, the timelines overlap perfectly, despite the fact that they don't overlap with a single US administration or even a single US political party (with Democrat Carter in charge from 1978-1980, then Republican Reagan from 1980-1982).].
+
+Though it's worth learning the full details of Israel's massacres over this 5-year span (if you want to understand, for example, how Israel learned that they'd have proud US backing no matter what atrocities or violations of international law they might choose to carry out)^[The work that probably best captures it, in my opinion, is the chapter on US-Israel relations during this period in @chamberlin_cold_2018.], here I'll interleave my own summaries of the sequence of events in Lebanon with quotes from @gleijeses_conflicting_2011 and @gleijeses_visions_2013 of the parallel developments in Angola:
+
+### The Initial Incursions (Angola 1976, Lebanon 1978)
+
+Having finally achieved independence from Portugal after centuries of colonial rule, the Angolan MPLA (Popular Movement for the Liberation of Angola) shakily tried to manage the country's post-colonial transition. As in most other instances of Third World decolonization, the US could not stand idly by and allow the MPLA to enact their hyper-radical, unconscionably-evil policies: allocating land for people to grow food on, allowing some of this food to be eaten by said people rather than exported to the West, healthcare and medicine being made available, and so on...
+
+> Washington urged Pretoria to intervene. On October 14, South African troops invaded Angola, transforming the civil war into an international conflict. As the South Africans raced toward Luanda, MPLA resistance crumbled; they would have seized the capital had not Castro decided on November 4 to respond to the MPLA's appeals for troops. [...] The Cuban forces, despite their initial inferiority in numbers and weapons, halted the South African onslaught. The official South African historian of the war writes, “The Cubans rarely surrendered and, quite simply, fought cheerfully until death.”44 [...] On March 27, 1976, the last South African troops withdrew from Angola.
+
+Not having an analogous Cuba of their own to protect them from Israel's wrath, 2,000 Lebanese-and-Palestinians-in-Lebanon were killed two years later in 1978.
+
+### The Onslaughts (Angola 1979, Lebanon 1982)
+
+The UN investigators:
+
+> It was with profound shock that the representatives of the United Nations verified, on the ground at Cassinga, the extreme savagery, the attempted annihilation, and the systematic destruction wrought upon a group of refugees who were under the protection of the High Commission for Refugees. . . . That these people were civilians is attested to by all the evidence that this UN mission has been able to gather. . . . The village of Cassinga—which had a population of approximately 3,000 Namibian refugees and was a well organized place with houses, schools, health centers, warehouses, and other social centers for its people who were mostly children, teenagers, women and old people—has been completely destroyed. . . . All the facts that this UN delegation has been able to verify reveal that what happened in Cassinga must be described as criminal in legal terms and savage in moral terms. It reminds us of the darkest moments of modern history.98
+
+> : “If the South Africans were ever going to be held accountable for their aggression, well, they would have been made to pay for Cassinga—and they weren’t. This means that they are free to repeat acts of aggression like this again and again.”102
+
+> Cassinga had demonstrated the West’s immense tolerance for South Africa’s violence, the Cubans had withdrawn from Angola’s far south, and no one expected the FAPLA to be able to repel an invasion. Small-scale SADF raids and air strikes into Angola became more frequent, provoking no reaction from Washington and its Western allies. [@gleijeses_visions_2013, 118]
+
+* After its 1978 "practice run" under a Labor government, Israel's even-more-"conservative" Likud party launched an even-more-brutal invasion of Lebanon in 1982 under the direction of future Prime Minister Ariel Sharon, mowing down civilians in the southern portion of Lebanon as a "sidebar" to the carnage in the capital city of Beirut, where at least 15,000 were killed (a figure which excludes the systematic execution of Palestinian refugees in Sabra and Shatila)
+
+## The Israel-Liberia Analogy
+
+This anaology is better explored by [Joseph Massad](https://www.middleeasteye.net/opinion/israel-liberia-apartheid-zionism-antisemitism) than I ever could.

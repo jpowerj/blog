@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.3">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jeff Jacobs">
+<meta name="dcterms.date" content="2026-05-13">
+
+<title>FIFA Fever 1: Exploring Between-Country Inequalities – I Am Become Jeff</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-302fd46e0bbd807994b2d5090a5736c9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-086a2bea7cef95774a881ba8c5e80b6a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-302fd46e0bbd807994b2d5090a5736c9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&amp;display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">I Am Become Jeff</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://jpj.georgetown.domains"> 
+<span class="menu-text">GU Homepage<i class="bi bi-box-arrow-up-right ps-2"></i></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#race-class-colonialism-and-the-world-cup" id="toc-race-class-colonialism-and-the-world-cup" class="nav-link active" data-scroll-target="#race-class-colonialism-and-the-world-cup">Race, Class, Colonialism, and the World Cup</a></li>
+  <li><a href="#colonizer-vs.-colonized-in-the-2026-world-cup" id="toc-colonizer-vs.-colonized-in-the-2026-world-cup" class="nav-link" data-scroll-target="#colonizer-vs.-colonized-in-the-2026-world-cup">Colonizer vs.&nbsp;Colonized in the 2026 World Cup</a></li>
+  <li><a href="#the-dataset" id="toc-the-dataset" class="nav-link" data-scroll-target="#the-dataset">The Dataset</a></li>
+  <li><a href="#capturing-within-group-inequality-with-the-gini-coefficient" id="toc-capturing-within-group-inequality-with-the-gini-coefficient" class="nav-link" data-scroll-target="#capturing-within-group-inequality-with-the-gini-coefficient">Capturing Within-Group Inequality with the Gini Coefficient</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">FIFA Fever 1: Exploring Between-Country Inequalities</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">History</div>
+    <div class="quarto-category">Sports</div>
+  </div>
+  </div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Jeff Jacobs </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="mailto:jj1088@georgetown.edu" target="_blank"><code>jj1088@georgetown.edu</code></a>
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 13, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="race-class-colonialism-and-the-world-cup" class="level2">
+<h2 class="anchored" data-anchor-id="race-class-colonialism-and-the-world-cup">Race, Class, Colonialism, and the World Cup</h2>
+<div style="float: right; margin: auto; padding: 5px;">
+<figure class="figure">
+<img src="images/africa_looted.jpg" style="width: 380px; margin: auto;" class="figure-img">
+<figcaption>
+<a href="https://revolutionsocialist.ng/africa-a-continent-rattled-by-coups-poverty-inflation-and-debt/" target="_blank">Image Source</a>
+</figcaption>
+</figure>
+</div>
+<p>I’ve always found it fascinating how incisively fans and researchers of “global” sports (soccer, cricket, rugby) are able to dissect and discuss the inherent class, race, and ethnic dynamics, whether “formally” in books like <span class="citation" data-cites="kuper_soccernomics_2018">Kuper and Szymanski (<a href="#ref-kuper_soccernomics_2018" role="doc-biblioref">2018</a>)</span> or informally in discussions about various professional leagues.</p>
+<p>To me this is in stark contrast to more North America-centric sports—American football, baseball, or basketball—where these dynamics only seem to “suddenly” pop into the consciousness of fans in very rare cases (as in, maybe every 10 years or so):</p>
+<ul>
+<li>When labor politics and the structural inequalities between workers and employers suddenly intrude upon <a href="https://www.youtube.com/watch?v=ZymSrDfLhW8">entire seasons of pro sports leagues like the NFL</a> due to players’ union strikes, or</li>
+<li>When a unique individual athlete like <a href="https://www.history.com/this-day-in-history/august-26/colin-kaepernick-kneels-during-national-anthem">Colin Kaepernick</a> rejects the keep-politics-out-of-sports ideology and forces an important national discussion on race (at great personal cost!)</li>
+</ul>
+<p>And so, although the NFL and NBA are my go-to leagues on a year-to-year basis, every four years I find myself getting more and more wrapped up in the excitement of the FIFA World Cup… and I think I’ve maybe finally figured out why: the World Cup means that every four years we get to watch athletes from massively unequal backgrounds go head-to-head on at least the minimal basis of <em>shared rules</em>. Meaning, as I learn more and more international history, it becomes more and more exciting to watch, knowing the national-historical narratives “behind” the games.</p>
+</section>
+<section id="colonizer-vs.-colonized-in-the-2026-world-cup" class="level2">
+<h2 class="anchored" data-anchor-id="colonizer-vs.-colonized-in-the-2026-world-cup">Colonizer vs.&nbsp;Colonized in the 2026 World Cup</h2>
+<p><a href="https://www.fifa.com/en/match-centre/match/17/285023/289273/400021490">France defeating Senegal</a> in this year’s World Cup led me to deep-dive other tumultuous metropole-colony pairs. Among this year’s matches so far, we have the following cases, where I’ve also included the ratio of per capita GDP between the metropole and former colony (from the full dataset you’ll be able to browse below):</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">GDP/Capita<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></th>
+<th style="text-align: right;">Colonizer</th>
+<th style="text-align: center;">Result</th>
+<th style="text-align: left;">Former Colony</th>
+<th style="text-align: right;">GDP/Capita</th>
+<th style="text-align: center;">GDPC Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">$54,799.00</td>
+<td style="text-align: right;">France</td>
+<td style="text-align: center;"><a href="https://www.fifa.com/en/match-centre/match/17/285023/289273/400021490">3 - 1</a></td>
+<td style="text-align: left;">Senegal</td>
+<td style="text-align: right;">$4,461.00</td>
+<td style="text-align: center;"><strong>12.28</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">$61,006.00</td>
+<td style="text-align: right;">England</td>
+<td style="text-align: center;"><a href="https://www.fifa.com/en/match-centre/match/17/285023/289273/400021506">0 - 0</a></td>
+<td style="text-align: left;">Ghana (Gold Coast)</td>
+<td style="text-align: right;">$7,056.00</td>
+<td style="text-align: center;"><strong>8.65</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">$48,460.00</td>
+<td style="text-align: right;">Spain</td>
+<td style="text-align: center;"><a href="https://www.fifa.com/en/match-centre/match/17/285023/289273/400021484">1 - 0</a></td>
+<td style="text-align: left;">Uruguay</td>
+<td style="text-align: right;">$32,039.00</td>
+<td style="text-align: center;"><strong>1.51</strong></td>
+</tr>
+</tbody>
+</table>
+<p>There are also three additional… I don’t know what to call them besides “corner cases”:</p>
+<ul>
+<li>Apropos of England’s <a href="https://www.fifa.com/en/match-centre/match/17/285023/289288/400021531">Round-of-16 match with Mexico</a>: in 1861 there was a <a href="https://www.nytimes.com/1861/12/05/archives/intervention-in-mexico-the-convention-between-england-france-and.html">joint invasion and occupation of Veracruz, Mexico</a> by British, French, and Spanish troops</li>
+<li>Although it wasn’t an “official” German colony, there <em>is</em> an… oddly-dark historical-colonial connection between Germany and Paraguay (who <a href="https://www.fifa.com/en/match-centre/match/17/285023/289287/400021513">eliminated Germany</a> in the round of 32!) in the form of the <a href="https://en.wikipedia.org/wiki/Nueva_Germania"><em>Nueva Germania</em> settlement</a>, founded in the middle of Paraguay’s Eastern province by Friedrich Nietzsche’s sister in 1886 🤯</li>
+<li>There was also the <a href="https://en.wikipedia.org/wiki/Dejima">Dutch “Exit Island”, Dejima</a>, apropos of the <a href="https://www.fifa.com/en/match-centre/match/17/285023/289273/400021470">2 - 2 Netherlands-Japan draw</a></li>
+</ul>
+<p>Going back in time, it gets even more interesting:</p>
+<ul>
+<li><strong>Algeria</strong> has never played <strong>France</strong> in a World cup… in fact, the one time they tried to play a friendly exhibition in 2001, fans in Paris <a href="https://en.wikipedia.org/wiki/2001_France_v_Algeria_football_match">stormed the pitch</a>, ending the game prematurely in the 76th minute</li>
+<li><strong>Angola</strong>, however, <em>did</em> play against their former colonizers in <strong>Portugal</strong> in 2006, the sole World Cup that Angola has ever qualified for (they <a href="http://news.bbc.co.uk/sport2/hi/football/world_cup_2006/4852704.stm">lost 1-0</a>)</li>
+<li><strong>Morocco</strong> lost to <strong>France</strong> in the semifinals of the <a href="https://www.espn.com/soccer/match/_/gameId/633848/morocco-france">2022 World Cup</a></li>
+</ul>
+</section>
+<section id="the-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="the-dataset">The Dataset</h2>
+<p>Here is my haphazardly-put-together spreadsheet, containing all of the matches thus far alongside the teams’ GDPs per capita as in the table above:</p>
+<ul>
+<li>A <strong>number of goals</strong> and <strong>country name</strong> highlighted in <span style="background-color: #fff2cc;"><strong>yellow</strong></span> indicates the winning side<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li>A <strong>GDP per capita</strong> figure highlighted in <span style="background-color: #fff2cc;"><strong>yellow</strong></span>, on the other hand, indicates the <strong>wealthier</strong> side on this measure</li>
+<li>Then, cases where the <strong>poorer team won</strong> are highlighted in <span style="background-color: #f4cccc;"><strong>red</strong></span>, which thus indicates <strong>“GDPC upsets”</strong> where the richer country failed to convert their wealth into victory</li>
+<li>For these <strong>“GDPC upsets”</strong>, the <strong>GDPC ratio</strong> is highlighted in the same <span style="background-color: #f4cccc;"><strong>red</strong></span></li>
+<li>The match data is then <strong>sorted by</strong> the <strong>GDPC ratio</strong>, so that we can see the most “surprising” upsets on the basis of national wealth!</li>
+</ul>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQjr3TbbfVBropSr9AAwfxnH7W1rMnmZ7Myjow-5ed1EKG8tgJsSmWjAeLNNElxuOVUDwVEtHVGgM3P/pubhtml?widget=true&amp;headers=false" style="width: 100%; height: 800px;">
+</iframe>
+<p>And, what we see is:</p>
+<ul>
+<li>The most surprising <strong>draw</strong> so far has been <a href="https://www.fifa.com/en/match-centre/match/17/285023/289273/400021502"><strong>Portugal’s 1 - 1 draw with DR Congo</strong></a>: Portugal’s GDP per capita is more than <strong>26 times greater</strong> than the DRC’s!</li>
+<li>The most surprising <strong>defeat</strong> has been <a href="https://www.fifa.com/en/match-centre/match/17/285023/289287/400021522"><strong>Morocco over the Netherlands</strong></a> on penalties in the Round of 32, with the Dutch GDP per capita being more than <strong>7 times greater</strong> than Morocco’s</li>
+</ul>
+<p>Then, if you <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQjr3TbbfVBropSr9AAwfxnH7W1rMnmZ7Myjow-5ed1EKG8tgJsSmWjAeLNNElxuOVUDwVEtHVGgM3P/pub?gid=0&amp;single=true&amp;output=csv"><strong>download the data as <code>.csv</code></strong></a> and sort it by the other two columns there, <code>gdpc_gap</code> and <code>mean_gdpc</code>, you will find that:</p>
+<ul>
+<li>The match with the <strong>greatest absolute difference</strong> in GDPs per capita was in fact <strong>also an upset!</strong> <strong>Qatar</strong>, with the highest GDPC out of all qualifying countries at $110,890.00, was <a href="https://www.fifa.com/en/match-centre/match/17/285023/289273/400021448"><strong>defeated 3 - 1 by Bosnia</strong></a>, a country with a <strong>$20,528.00</strong> GDP per capita.</li>
+<li>The most “wealth-infused” match, by far, was Qatar’s <a href="https://www.fifa.com/en/match-centre/match/17/285023/289273/400021447"><strong>1 - 1 draw with Switzerland</strong></a>, with an average GDP per capita of <strong>$96,588.00</strong> between the two teams. This match was also coincidentally(?) played in San Francisco, California, the <a href="https://en.wikipedia.org/wiki/List_of_U.S._metropolitan_areas_by_GDP_per_capita"><strong>wealthiest city in the US by GDP per capita</strong></a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
+<li>At the opposite end of the spectrum, the “poorest” match in terms of mean GDP per capita between the two teams was <a href="https://www.fifa.com/en/match-centre/match/17/285023/289273/400021452"><strong>Morocco’s 4 - 2 defeat of Haiti</strong></a>, with Morocco’s GDPC of $9,163.00 and Haiti’s of $2,810.00 averaging out to <strong>$5,986.50</strong>.</li>
+</ul>
+</section>
+<section id="capturing-within-group-inequality-with-the-gini-coefficient" class="level2">
+<h2 class="anchored" data-anchor-id="capturing-within-group-inequality-with-the-gini-coefficient">Capturing Within-Group Inequality with the Gini Coefficient</h2>
+<p>Finally, since GSheets also doesn’t seem to allow embedding the country GDPs separated by group, here’s that copied manually so you can explore both the <strong>average wealth</strong> and <strong>degree of inequality</strong> for each.</p>
+<p>By looking at the <strong>Gini Coefficient</strong> for each group, you can see how this measure of inequality allows us to quantitatively “capture” properties we may have suspected intuitively:</p>
+<ul>
+<li><strong>Group I</strong> emerges as the <strong>most unequal</strong> of the 12 groups, with wealthy <strong>Norway and France</strong> pitted against significantly-less-wealthy <strong>Iraq and Senegal</strong>, producing a coefficient of <strong>0.463</strong></li>
+<li><strong>Group F</strong> is the <strong>most equal</strong> of the groups, though this may be less easy to intuit: essentially, while Tunisia is somewhat of an outlier, the other three countries in this group are generally considered to be “wealthy, industrialized democracies”<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
+</ul>
+<style>
+.group-table th, .group-table td {
+  font-size: 0.9rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between columns */
+}
+</style>
+<div class="grid-container">
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group A</strong></td>
+</tr>
+<tr class="even" style="border-top: none; background-color: #edcec2;">
+<td style="text-align: right;"><strong>Mean GDPC: $34,668.25</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.271</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">South Korea</td>
+<td style="text-align: center;">$55,071.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Czechia</td>
+<td style="text-align: center;">$47,964.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Mexico</td>
+<td style="text-align: center;">$22,040.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">South Africa</td>
+<td style="text-align: center;">$13,598.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group B -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group B</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $67,602.75</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.274</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Qatar</td>
+<td style="text-align: center;">$110,890.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Switzerland</td>
+<td style="text-align: center;">$82,286.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Canada</td>
+<td style="text-align: center;">$56,707.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Bosnia</td>
+<td style="text-align: center;">$20,528.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group C -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group C</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $19,293.00</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.449</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Scotland</td>
+<td style="text-align: center;">$45,547.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Brazil</td>
+<td style="text-align: center;">$19,652.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Morocco</td>
+<td style="text-align: center;">$9,163.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Haiti</td>
+<td style="text-align: center;">$2,810.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group D -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group D</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $47,060.75</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.268</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">USA</td>
+<td style="text-align: center;">$75,489.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Australia</td>
+<td style="text-align: center;">$60,304.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Turkey</td>
+<td style="text-align: center;">$36,154.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Paraguay</td>
+<td style="text-align: center;">$16,296.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group E -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group E</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $26,114.75</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.418</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Germany</td>
+<td style="text-align: center;">$62,555.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Curaçao</td>
+<td style="text-align: center;">$21,218.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Ecuador</td>
+<td style="text-align: center;">$13,936.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Côte d'Ivoire</td>
+<td style="text-align: center;">$6,747.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group F -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group F</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $48,090.75</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.247</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Netherlands</td>
+<td style="text-align: center;">$70,499.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Sweden</td>
+<td style="text-align: center;">$62,979.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Japan</td>
+<td style="text-align: center;">$46,107.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Tunisia</td>
+<td style="text-align: center;">$12,775.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group G -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group G</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $36,736.50</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.292</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Belgium</td>
+<td style="text-align: center;">$63,348.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">New Zealand</td>
+<td style="text-align: center;">$49,316.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Iran</td>
+<td style="text-align: center;">$17,484.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Egypt</td>
+<td style="text-align: center;">$16,798.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group H -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group H</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $38,285.25</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.286</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Saudi Arabia</td>
+<td style="text-align: center;">$62,793.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Spain</td>
+<td style="text-align: center;">$48,460.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Uruguay</td>
+<td style="text-align: center;">$32,039.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Cabo Verde</td>
+<td style="text-align: center;">$9,849.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group I -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group I</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $40,772.50</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.463</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Norway</td>
+<td style="text-align: center;">$91,105.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">France</td>
+<td style="text-align: center;">$54,799.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Iraq</td>
+<td style="text-align: center;">$12,725.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Senegal</td>
+<td style="text-align: center;">$4,461.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group J -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group J</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $28,895.50</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.377</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Austria</td>
+<td style="text-align: center;">$63,788.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Argentina</td>
+<td style="text-align: center;">$26,772.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Algeria</td>
+<td style="text-align: center;">$15,502.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Jordan</td>
+<td style="text-align: center;">$9,520.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group K -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group K</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $18,181.50</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.446</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Portugal</td>
+<td style="text-align: center;">$42,197.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Colombia</td>
+<td style="text-align: center;">$18,477.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Uzbekistan</td>
+<td style="text-align: center;">$10,450.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">DR Congo</td>
+<td style="text-align: center;">$1,602.00</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- Group L -->
+
+
+<table class="group-table caption-top table">
+<tbody>
+<tr class="odd" style="border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; background-color: #edcec2;">
+<td colspan="2" style="text-align: center; padding-bottom: 0px; margin-bottom: 0px; border-bottom: none;"><strong>Group L</strong></td>
+</tr>
+<tr class="even" style="background-color: #edcec2; border-top: none;">
+<td style="text-align: right;"><strong>Mean GDPC: $36,821.50</strong></td>
+<td style="text-align: left;"><strong>Gini Coefficient: 0.286</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">England</td>
+<td style="text-align: center;">$61,006.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Croatia</td>
+<td style="text-align: center;">$42,829.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Panama</td>
+<td style="text-align: center;">$36,395.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ghana</td>
+<td style="text-align: center;">$7,056.00</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-kuper_soccernomics_2018" class="csl-entry" role="listitem">
+Kuper, Simon, and Stefan Szymanski. 2018. <em><a href="https://books.google.com?id=4VQ9DwAAQBAJ">Soccernomics: <span>Why England Loses</span>, <span>Why Germany</span> and <span>Brazil Win</span>, and <span>Why</span> the <span>U</span>.<span>S</span>., <span>Japan</span>, <span>Australia</span>, <span>Turkey</span> – and <span>Even Iraq</span> – <span>Are Destined</span> to <span>Become</span> the <span>Kings</span> of the <span>World</span>’s <span>Most Popular Sport</span></a></em>. PublicAffairs.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Data from the <a href="https://ourworldindata.org/grapher/gdp-per-capita-worldbank">World Bank</a>, 2024<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>For matches decided by penalties I just arbitrarily added 0.1 to the score of the winning team because… I don’t know what I’m doing or what the “convention” is for that, if there is one!<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>I’m using the general definition of 250,000+ people as a “city” here. Using all MSAs, San Francisco comes in second behind Midland, TX<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Tunisia is also a democracy, by my own understanding of the term, but if you don’t think the <a href="https://en.wikipedia.org/wiki/The_Economist_Democracy_Index"><em>Economist Democracy Index</em></a> is silly (like I do), then you can instead call it a “Hybrid Regime”.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

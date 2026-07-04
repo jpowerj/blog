@@ -11,3 +11,7 @@
 #quarto-header {
   background-color: #bd5d38 !important;
 }
+
+figcaption {
+  text-align: center;
+}
