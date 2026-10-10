@@ -15,3 +15,8 @@
 figcaption {
   text-align: center;
 }
+
+.quarto-color-scheme-toggle.quarto-navigation-tool i.bi {
+  display: inline-block;
+  transform: translateY(2px);
+}

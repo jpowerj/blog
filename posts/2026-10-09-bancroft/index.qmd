@@ -1,0 +1,103 @@
+---
+title: "How to Win the Bancroft Prize"
+image: "images/resendez.jpg"
+date: 2026-05-13
+bibliography: "../../Blog.bib"
+csl: "../../chicago-17-no-url.csl"
+format:
+  html:
+    df-print: kable
+    code-fold: show
+    toc: false
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <style>
+        table, table > *, .datatables {
+          font-family: "Roboto Mono", monospace;
+          font-optical-sizing: auto;
+          font-size: 12px;
+        }
+        .form-control {
+          font-size: 12px;
+          padding-left: 6px;
+          padding-right: 6px;
+          padding-top: 3px;
+          padding-bottom: 3px;
+        }
+        </style>
+categories:
+  - History
+  - Sports
+  - Inequality
+---
+
+<div style='float: right; margin: auto; padding: 5px;'>
+<figure>
+<img src='images/resendez.jpg' style='width: 280px; margin: auto;'>
+</figure>
+</div>
+
+In a procrastination fit last night, I was looking at the list of [Bancroft Prize-winning books](https://en.wikipedia.org/wiki/Bancroft_Prize) and realized "huh, a lot of history books have titles like *Catchy Hook: A History of [Subject], [Start Year]-[End Year]*". My data-scientist brain popped in and exclaimed, "semi-structured data!", so I compiled a dataset of all Bancroft winners with explicit or implied dates in their titles, with start and end years plus indicator variables for whether the dates were explicit or implied.
+
+I originally thought it was going to be easy to find out which date range was "most important" to Bancroft Prize-winning historians, in the sense that it lay inside the date ranges of the most prize-winning books. However, it turns out that this problem doesn't fit so neatly into a "standard" algorithmic analysis of intersection problems, since that domain is mostly concerned with efficient ways to check whether a specific date/point is within a range or set of ranges (for example, by using an [Interval Tree](https://en.wikipedia.org/wiki/Interval_tree)).
+
+The good news is, I was finally able to find the solution to my worries in this [Engineering Stack Exchange post](https://softwareengineering.stackexchange.com/questions/330885/job-scheduling-algorithm-to-find-the-maximum-number-of-overlapping-jobs) on job scheduling algorithms — the domain I should have been looking at instead of intersection problems!
+
+And, the main finding is this:
+
+> [If you want to win a Bancroft Prize, write about the years **1816 to 1818!**]{style="font-size: 140%;"}
+
+The following 29 Bancroft Prize-winning books (sorted by the start of their year ranges, by default) all analyze this period, and **no other date range** has as many books whose date ranges contain it. You can remove the default filter to view *all* books, or download the dataset [here](data/bancroft_processed.csv), which also contains more information on e.g. whether the year is directly given in the title (`in_title`) or inferred from it (`inferred`).
+
+```{r}
+#| label: filter-bancroft
+#| echo: true
+#| code-fold: true
+library(tidyverse)
+library(DT)
+bancroft_df <- read_csv('data/bancroft_processed.csv') |>
+  select(year, book, start_year, end_year) |>
+  mutate(
+    start_year = as.integer(start_year),
+    end_year = as.integer(end_year)
+  )
+datatable(
+  bancroft_df,
+  filter="top",
+  rownames=FALSE,
+  width="100%",
+  options = list(
+    autoWidth = TRUE,
+    scrollX = TRUE,
+    # pageLength = 6,
+    order = list(list(2, "asc")),
+    columnDefs = list(
+      # Year
+      list(width = "30px", targets = 0),
+      # Title
+      # list(width = "390px", targets = 1),
+      # start
+      list(width = "100px", targets = 2),
+      # end
+      list(width = "100px", targets = 3)
+    ),
+    searchCols = list(
+      NULL,
+      NULL,
+      list(search = "1492 ... 1816"),
+      list(search = "1818 ... 2026")
+    )
+  )
+)
+```
+
+
+
+### Footnotes
+
+1. For Merrell's *The Indians' New World: Catawbas and Their Neighbors from European Contact through the Era of Removal* (1989), we assume that "European contact" refers to the beginning of the [Spanish colonization of the Americas](https://en.wikipedia.org/wiki/Spanish_colonization_of_the_Americas) in 1492, and that the era of removal ends with the [Cherokee removal](https://en.wikipedia.org/wiki/Cherokee_removal) from 1836 to 1839.
+2. For Bolster's *The Mortal Sea: Fishing the Atlantic in the Age of Sail* (2012), we use Wikipedia's definition of the "Age of Sail" (https://en.wikipedia.org/wiki/Age_of_Sail) as 1571–1862.
+

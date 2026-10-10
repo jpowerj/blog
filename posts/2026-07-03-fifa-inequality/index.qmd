@@ -1,5 +1,5 @@
 ---
-title: "FIFA Fever 1: Exploring Between-Country Inequalities"
+title: "FIFA Fever: Exploring Between-Country Inequalities"
 image: "images/africa_looted.jpg"
 date: 2026-05-13
 bibliography: "../../Blog.bib"

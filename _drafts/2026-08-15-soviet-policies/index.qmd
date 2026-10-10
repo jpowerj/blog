@@ -1,0 +1,13 @@
+---
+title: "Soviet Policies That Would Probably Be Good in the US As Well"
+image: "images/africa_looted.jpg"
+date: 2026-08-15
+bibliography: "../../Blog.bib"
+csl: "../../chicago-17-no-url.csl"
+format:
+  html:
+    df-print: kable
+    code-fold: show
+categories:
+  - History
+---

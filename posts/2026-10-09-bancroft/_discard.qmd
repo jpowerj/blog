@@ -1,0 +1,49 @@
+| Start | End | Book | Published |
+| - | - | - | - |
+| 1492 | 1839 | Merrell, James H. *The Indians' New World: Catawbas and Their Neighbors from European Contact through the Era of Removal*[^fn1] | 1989 |
+| 1571 | 1862 | Bolster, W. Jeffrey. *The Mortal Sea: Fishing the Atlantic in the Age of Sail*[^fn2] | 2012 |
+| 1580 | 1865 | Tomlins, Christopher. *Freedom Bound: Law, Labor, and Civic Identity in Colonizing English America, 1580-1865* | 2010 |
+| * Fogel, Robert William and Stanley L. Engerman. Time on the Cross: The Economics of American
+Negro Slavery and Time on the Cross: Evidence and Methods. Boston : Atlantic, Little, Brown, 1974.
+
+: {tbl-colwidths="[12,12,64,12]"}
+
+* Jones, Jacqueline. Labor of Love, Labor of Sorrow: Black Women, Work, and the Family from Slavery
+to the Present. New York : Basic Books, 1985.
+* Berlin, Ira. Many Thousands Gone: The First Two Centuries of Slavery in North America.
+Cambridge, Massachusetts : Harvard University Press, 1998.
+* Hahn, Steven. A Nation Under Our Feet: Black Political Struggles in the Rural South from Slavery to
+the Great Migration. Cambridge, Massachusetts : Belknap Press of Harvard University Press, 2003.
+* Brooke, John L. The Refiner's Fire: The Making of Mormon Cosmology, 1644â??1844. Cambridge,
+Eng. : Cambridge University Press, 1994.
+* Smith, Page. John Adams. New York : Doubleday, 1962.
+* Sellers, Charles. Charles Willson Peale. New York : Charles Scribner's Sons, 1969.
+* Holton, Woody. Abigail Adams. New York : Free Press, 2009.
+* Davis, David Brion. The Problem of Slavery in the Age of Revolution, 1770–1823. Ithaca, NY : Cornell
+University Press, 1975.
+* Kyvig, David E. Explicit and Authentic Acts: Amending the U.S. Constitution, 1776–1995. Lawrence,
+KS : University of Kansas Press, 1996.
+* Horwitz, Morton J. The Transformation of American Law, 1780–1860. Cambridge, Massachusetts :
+Harvard University Press, 1977.
+* Lebsock, Suzanne. *The Free Women of Petersburg: Status and Culture in a Southern Town, 1784-1860*. New York: Norton, 1984.
+* Ryan, Mary P. Cradle of the Middle Class: The Family in Oneida County, New York, 1790–1865.
+Cambridge, Eng. : Cambridge University Press, 1981.
+* Ely, Melvin Patrick. Israel on the Appomattox: A Southern Experiment in Black Freedom from the
+1790s Through the Civil War. New York : Alfred A. Knopf, 2004.
+* Young, James Sterling. *The Washington Community, 1800-1828*. Princeton, NJ: Princeton University Press, 1966.
+* Hyde, Anne. Empires, Nations and Families: A History of the North American West, 1800–1860.
+Lincoln, NE : University of Nebraska, 2011.
+* Wilentz, Sean. The Rise of American Democracy: Jefferson to Lincoln. New York : W. W. Norton,
+2005.
+* Thomas, John L. The Liberator: William Lloyd Garrison. New York : Little, Brown, 1963.
+* Duberman, Martin B. Charles Francis Adams, 1807â??1866. New York : Houghton Mifflin, 1961.
+* Higman, Barry W. *Slave Population and Economy in Jamaica, 1807-1834*. Cambridge, Eng.: Cambridge University Press, 1976.
+* O'Brien, Michael. Conjectures of Order: Intellectual Life and the American South, 1810–1860. Chapel
+Hill, NC : University of North Carolina Press, 2004.
+* Perkins, Bradford. Castlereagh and Adams: England and the United States, 1812–1823. Berkeley, CA :
+University of California Press, 1964.
+* Dangerfield, George. The Era of Good Feelings. New York : Harcourt, Brace, 1952.
+* Freehling, William W. Prelude to Civil War: The Nullification Controversy in South Carolina, 1816–
+1836. New York : Harper & Row, 1966.
+* Rosen, Deborah. Border Law: The First Seminole War and American Nationhood. Cambridge,
+Massachusetts : Harvard University Press, 2015.
